@@ -1,0 +1,5 @@
+- name: Install Exemple
+  ansible.builtin.package:
+    name:
+      - exemple
+    state: present
