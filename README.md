@@ -1,7 +1,7 @@
 
 ---
 
-# Projet de Configuration Ansible pour AlmaLinux 9 selon les Recommandations de l'ANSSI
+# Projet de Configuration Ansible pour Linux selon les Recommandations de l'ANSSI
 
 ## Introduction
 
