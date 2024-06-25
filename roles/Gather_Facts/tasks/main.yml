@@ -1,1 +1,3 @@
-
+- name: Gather OS and Distribution
+  debug:
+    msg: "OS: {{ ansible_facts['os_name'] }} | Distribution: {{ ansible_facts['os_family'] }}"
