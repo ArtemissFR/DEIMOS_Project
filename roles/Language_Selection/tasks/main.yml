@@ -1,1 +1,4 @@
-
+  - name: QUESTION - Language
+    pause:
+      prompt: "[???] Choose a language for the execution of the playbook [french/english]"
+    register: LANGUAGE
