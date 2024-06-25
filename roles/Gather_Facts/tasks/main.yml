@@ -1,16 +1,6 @@
 - name: Gather Facts
   gather_facts:
 
-###Show_Space_Disk###
-- name: Récupérer les informations sur l'espace disque
-  command: df -h
-  register: disk_info
-
-- name: Afficher les informations sur l'espace disque
-  debug:
-    msg: "Les informations sur l'espace disque sont : {{ disk_info.stdout_lines }}"
-###Show_Space_Disk###
-
 ###Show_Network###
 - name: Récupérer les informations sur les interfaces réseau
   command: ip a
