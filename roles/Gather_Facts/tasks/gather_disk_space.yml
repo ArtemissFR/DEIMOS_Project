@@ -1,4 +1,3 @@
-###Show_Space_Disk###
 - name: Récupérer les informations sur l'espace disque
   command: df -h
   register: disk_info
@@ -7,4 +6,3 @@
   debug:
     msg: "Les informations sur l'espace disque sont : {{ disk_info.stdout_lines }}"
   when: GATHER_INFO_VIEW.user_input | bool
-###Show_Space_Disk###
