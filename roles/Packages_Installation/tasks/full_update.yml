@@ -1,5 +1,5 @@
-- name: Update all packages to their latest version
-  ansible.builtin.apt:
+- name: Upgrade all packages
+  ansible.builtin.dnf:
     name: "*"
     state: latest
   ignore_errors: true
