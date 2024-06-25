@@ -1,0 +1,9 @@
+###Show_Network###
+- name: Récupérer les informations sur les interfaces réseau
+  command: ip a
+  register: network_info
+
+- name: Afficher les informations sur les interfaces réseau
+  debug:
+    msg: "Les informations sur les interfaces réseau sont : {{ network_info.stdout_lines }}"
+###Show_Network###
