@@ -6,4 +6,5 @@
 - name: Afficher les informations sur les interfaces réseau
   debug:
     msg: "Les informations sur les interfaces réseau sont : {{ network_info.stdout_lines }}"
+  when: GATHER_INFO_VIEW.user_input | bool
 ###Show_Network###
