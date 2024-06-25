@@ -1,5 +1,20 @@
 - name: Gather Facts
   gather_facts:
 
-- name: Include tasks from install_packages.yml
-  include_tasks: install_packages.yml
+- name: Gather OS
+  include_tasks: gather_os.yml
+
+- name: Gather Disk Space
+  include_tasks: gather_disk_space.yml
+
+- name: Gather Memory
+  include_tasks: gather_memory.yml
+
+- name: Gather Processor
+  include_tasks: gather_processor.yml
+
+- name: Gather Processus
+  include_tasks: gather_process.yml
+
+- name: Gather Network
+  include_tasks: gather_network.yml
