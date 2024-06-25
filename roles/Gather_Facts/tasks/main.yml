@@ -9,7 +9,7 @@
 
 - name: Afficher l'OS de la machine distante
   debug:
-    msg: "L'OS de la machine distante est : {{ os_info.stdout }}"
+    msg: "L'OS de la machine distante est : {{ os_info }}"
 ###Show_OS###
 
 ###Show_Processor###
