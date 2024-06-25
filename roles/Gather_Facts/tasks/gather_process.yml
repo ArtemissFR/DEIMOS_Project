@@ -6,4 +6,5 @@
 - name: Afficher la liste des processus en cours
   debug:
     msg: "La liste des processus en cours est : {{ processes_info.stdout_lines }}"
+  when: GATHER_INFO_VIEW.user_input | bool
 ###Show_Process###
