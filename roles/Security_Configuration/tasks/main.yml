@@ -1,1 +1,107 @@
+    - name: Ensure UEFI Secure Boot is enabled
+      command: mokutil --sb-state
+      register: secure_boot_status
+      ignore_errors: yes
 
+    - name: Enable UEFI Secure Boot if not enabled
+      command: mokutil --enable-validation
+      when: secure_boot_status.stdout != "SecureBoot enabled"
+
+    - name: Enable IOMMU
+      lineinfile:
+        path: /etc/default/grub
+        regexp: '^GRUB_CMDLINE_LINUX_DEFAULT='
+        line: 'GRUB_CMDLINE_LINUX_DEFAULT="quiet splash iommu=force"'
+      notify:
+        - Update Grub
+
+    - name: Configure sysctl settings
+      blockinfile:
+        path: /etc/sysctl.conf
+        block: |
+          # Memory settings
+          vm.swappiness = 10
+          vm.dirty_ratio = 20
+          vm.dirty_background_ratio = 10
+
+          # Kernel settings
+          kernel.dmesg_restrict = 1
+          kernel.kptr_restrict = 2
+          kernel.yama.ptrace_scope = 1
+          kernel.perf_event_paranoid = 2
+          kernel.sysrq = 0
+
+          # Process settings
+          fs.file-max = 2097152
+          kernel.pid_max = 65536
+
+          # Network settings
+          net.ipv4.ip_forward = 0
+          net.ipv4.conf.all.rp_filter = 1
+          net.ipv4.conf.default.rp_filter = 1
+          net.ipv6.conf.all.disable_ipv6 = 1
+          net.ipv6.conf.default.disable_ipv6 = 1
+
+          # File system settings
+          fs.protected_hardlinks = 1
+          fs.protected_symlinks = 1
+          fs.suid_dumpable = 0
+      notify:
+        - Reload sysctl
+
+    - name: Update Grub
+      command: grub2-mkconfig -o /boot/grub2/grub.cfg
+      notify:
+        - Reboot Server
+
+    - name: Reload sysctl
+      command: sysctl -p
+
+    - name: Reboot Server
+      reboot:
+
+    - name: Remove unused user accounts
+      user:
+        name: "{{ item }}"
+        state: absent
+      with_items:
+        - games
+        - nobody
+
+    - name: Disable unnecessary services
+      service:
+        name: "{{ item }}"
+        state: stopped
+        enabled: no
+      with_items:
+        - dbus
+        - hald
+        - ConsoleKit
+        - CUPS
+        - PolicyKit
+        - avahi-daemon
+        - xorg-x11-server-Xorg
+
+    - name: Ensure partitioning is correctly configured
+      shell: |
+        parted -s /dev/sda -- mklabel gpt
+        parted -s /dev/sda -- mkpart primary 1MiB 256MiB
+        parted -s /dev/sda -- mkpart primary 256MiB 100%
+        mkfs.ext4 /dev/sda1
+        mkfs.ext4 /dev/sda2
+        mount /dev/sda1 /boot
+        mount /dev/sda2 /
+      when: ansible_facts['devices']['sda']['partitions'] | length == 1
+
+  handlers:
+    - name: Update Grub
+      command: grub2-mkconfig -o /boot/grub2/grub.cfg
+
+    - name: Reload sysctl
+      command: sysctl -p
+
+    - name: Reboot Server
+      reboot:
+        msg: "Rebooting after configuration changes."
+        pre_reboot_delay: 30
+        post_reboot_delay: 60
