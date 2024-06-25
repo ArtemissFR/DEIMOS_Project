@@ -1,0 +1,9 @@
+###Show_Process###
+- name: Récupérer la liste des processus en cours
+  command: ps aux
+  register: processes_info
+
+- name: Afficher la liste des processus en cours
+  debug:
+    msg: "La liste des processus en cours est : {{ processes_info.stdout_lines }}"
+###Show_Process###
