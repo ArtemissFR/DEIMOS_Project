@@ -6,4 +6,5 @@
 - name: Afficher les informations sur la mémoire
   debug:
     msg: "Les informations sur la mémoire sont : {{ memory_info.stdout_lines }}"
+  when: GATHER_INFO_VIEW.user_input | bool
 ###Show_Memory###
