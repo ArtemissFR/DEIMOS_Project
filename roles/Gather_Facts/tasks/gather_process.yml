@@ -1,4 +1,3 @@
-###Show_Process###
 - name: Récupérer la liste des processus en cours
   command: ps aux
   register: processes_info
@@ -7,4 +6,3 @@
   debug:
     msg: "La liste des processus en cours est : {{ processes_info.stdout_lines }}"
   when: GATHER_INFO_VIEW.user_input | bool
-###Show_Process###
