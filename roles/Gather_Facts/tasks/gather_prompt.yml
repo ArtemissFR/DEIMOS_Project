@@ -1,4 +1,11 @@
-  - name: QUESTION - Gather
+  - name: QUESTION - Informations
     pause:
       prompt: "[???] Would you like to see the informations that are gathered ? [yes/no]"
     register: GATHER_INFO_VIEW
+    when: LANGUAGE.user_input == "english"
+
+  - name: QUESTION - Informations
+    pause:
+      prompt: "[???] Voulez vous voir les informations récupérer ? [oui/non]"
+    register: GATHER_INFO_VIEW
+    when: LANGUAGE.user_input == "french"
