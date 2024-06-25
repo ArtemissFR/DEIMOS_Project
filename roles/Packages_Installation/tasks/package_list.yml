@@ -1,4 +1,29 @@
-- name: Install the latest version of Apache
+- name: Install wireshark
   ansible.builtin.dnf:
-    name: httpd
+    name: wireshark
+    state: latest
+
+- name: Install tcpdump
+  ansible.builtin.dnf:
+    name: tcpdump
+    state: latest
+
+- name: Install nmap
+  ansible.builtin.dnf:
+    name: nmap
+    state: latest
+
+- name: Install strace
+  ansible.builtin.dnf:
+    name: strace
+    state: latest
+
+- name: Install patch
+  ansible.builtin.dnf:
+    name: patch
+    state: latest
+
+- name: Install lshw
+  ansible.builtin.dnf:
+    name: lshw
     state: latest
