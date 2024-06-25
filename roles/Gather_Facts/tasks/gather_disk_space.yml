@@ -6,4 +6,5 @@
 - name: Afficher les informations sur l'espace disque
   debug:
     msg: "Les informations sur l'espace disque sont : {{ disk_info.stdout_lines }}"
+  when: GATHER_INFO_VIEW.user_input | bool
 ###Show_Space_Disk###
