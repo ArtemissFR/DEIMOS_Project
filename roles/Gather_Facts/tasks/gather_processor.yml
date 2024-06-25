@@ -6,4 +6,5 @@
 - name: Afficher le type de processeur
   debug:
     msg: "Le type de processeur est : {{ cpu_info.stdout_lines }}"
+  when: GATHER_INFO_VIEW.user_input | bool
 ###Show_Processor###
