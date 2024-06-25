@@ -1,4 +1,3 @@
-###Show_Memory###
 - name: Récupérer les informations sur la mémoire
   command: free -m
   register: memory_info
@@ -7,4 +6,3 @@
   debug:
     msg: "Les informations sur la mémoire sont : {{ memory_info.stdout_lines }}"
   when: GATHER_INFO_VIEW.user_input | bool
-###Show_Memory###
