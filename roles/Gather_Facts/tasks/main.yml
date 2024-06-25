@@ -1,16 +1,6 @@
 - name: Gather Facts
   gather_facts:
 
-###Show_Network###
-- name: Récupérer les informations sur les interfaces réseau
-  command: ip a
-  register: network_info
-
-- name: Afficher les informations sur les interfaces réseau
-  debug:
-    msg: "Les informations sur les interfaces réseau sont : {{ network_info.stdout_lines }}"
-###Show_Network###
-
 ###Show_Process###
 - name: Récupérer la liste des processus en cours
   command: ps aux
