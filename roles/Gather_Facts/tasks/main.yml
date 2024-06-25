@@ -1,17 +1,6 @@
 - name: Gather Facts
   gather_facts:
 
-
-###Show_OS###
-- name: Récupérer l'OS de la machine distante
-  command: uname -a
-  register: os_info
-
-- name: Afficher l'OS de la machine distante
-  debug:
-    msg: "L'OS de la machine distante est : {{ os_info.stdout_lines }}"
-###Show_OS###
-
 ###Show_Processor###
 - name: Récupérer le type de processeur
   command: lscpu
