@@ -1,0 +1,4 @@
+  - name: QUESTION - Gather
+    pause:
+      prompt: "[???] Would you like to see the informations that are gathered ? [yes/no]"
+    register: gather_info_view
