@@ -1,26 +1,6 @@
 - name: Gather Facts
   gather_facts:
 
-###Show_Processor###
-- name: Récupérer le type de processeur
-  command: lscpu
-  register: cpu_info
-
-- name: Afficher le type de processeur
-  debug:
-    msg: "Le type de processeur est : {{ cpu_info.stdout_lines }}"
-###Show_Processor###
-
-###Show_Memory###
-- name: Récupérer les informations sur la mémoire
-  command: free -m
-  register: memory_info
-
-- name: Afficher les informations sur la mémoire
-  debug:
-    msg: "Les informations sur la mémoire sont : {{ memory_info.stdout_lines }}"
-###Show_Memory###
-
 ###Show_Space_Disk###
 - name: Récupérer les informations sur l'espace disque
   command: df -h
