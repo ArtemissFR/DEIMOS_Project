@@ -1,6 +1,9 @@
 - name: Gather Facts
   gather_facts:
 
+- name: Launch Prompt
+  include_tasks: gather_prompt.yml
+
 - name: Gather OS
   include_tasks: gather_os.yml
 
