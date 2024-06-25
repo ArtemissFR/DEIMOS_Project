@@ -1,4 +1,3 @@
-###Show_OS###
 - name: Récupérer l'OS de la machine distante
   command: uname -a
   register: os_info
@@ -7,4 +6,3 @@
   debug:
     msg: "L'OS de la machine distante est : {{ os_info.stdout_lines }}"
   when: GATHER_INFO_VIEW.user_input | bool
-###Show_OS###
