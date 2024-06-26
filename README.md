@@ -3,7 +3,7 @@
 # DEIMOS PROJECT
 
 <p align="center">
-  <img src="https://png.pngtree.com/png-vector/20220626/ourmid/pngtree-spartan-helmet-logo-template-vector-icon-png-image_5464450.png" alt="Deimos Icon" width="200"/>
+  <img src="https://png.pngtree.com/png-clipart/20221219/original/pngtree-spartan-red-logo-good-for-esports-png-image_8781340.png" alt="Deimos Icon" width="200"/>
 </p>
 
 ## Projet de Configuration Ansible pour Linux selon les Recommandations de l'ANSSI
