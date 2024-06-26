@@ -31,12 +31,14 @@ Ce projet a pour objectif de fournir un guide et un ensemble de scripts Ansible 
 - Proposition d'un choix de la langue .
 
 #### Rôle "Gather_Facts" :
-- Récupération et affichage des informations sur le système d'exploitation ;
-- Récupération et affichage des informations sur l'espace disque ;
-- Récupération et affichage des informations sur la mémoire ;
-- Récupération et affichage des informations sur le processeur ;
-- Récupération et affichage des informations sur les processus en cours ;
-- Récupération et affichage des informations sur le réseau .
+| Tâches | 
+|--------|
+| - Récupération et affichage des informations sur le système d'exploitation ; |
+| - Récupération et affichage des informations sur l'espace disque ; |
+| - Récupération et affichage des informations sur la mémoire ; |
+| - Récupération et affichage des informations sur le processeur ; |
+| - Récupération et affichage des informations sur les processus en cours ; |
+| - Récupération et affichage des informations sur le réseau . |
 
 #### Rôle "Packages_Installation" :
 - Mise à jour des paquets présents sur le système ;
