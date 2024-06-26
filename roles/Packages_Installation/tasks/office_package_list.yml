@@ -1,24 +1,24 @@
-- name: [Office Package] - Install libreoffice
+- name: "[Office Package] - Install libreoffice"
   ansible.builtin.dnf:
     name: libreoffice
     state: latest
 
-- name: [Office Package] - Install firefox
+- name: "[Office Package] - Install firefox"
   ansible.builtin.dnf:
     name: firefox
     state: latest
 
-- name: [Office Package] - Install thunderbird
+- name: "[Office Package] - Install thunderbird"
   ansible.builtin.dnf:
     name: thunderbird
     state: latest
 
-- name: [Office Package] - Install gimp
+- name: "[Office Package] - Install gimp"
   ansible.builtin.dnf:
     name: gimp
     state: latest
 
-- name: [Office Package] - Install inkscape
+- name: "[Office Package] - Install inkscape"
   ansible.builtin.dnf:
     name: inkscape
     state: latest
