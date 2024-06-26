@@ -2,7 +2,9 @@
 ---
 # DEIMOS PROJECT
 
-<img src="https://static.wikia.nocookie.net/rainbowsix/images/3/3a/R6S_Y9S1_Deimos_Icon.png/revision/latest?cb=20240225143037" alt="Deimos Icon" width="200"/>
+<p align="center">
+  <img src="https://static.wikia.nocookie.net/rainbowsix/images/3/3a/R6S_Y9S1_Deimos_Icon.png/revision/latest?cb=20240225143037" alt="Deimos Icon" width="200"/>
+</p>
 
 ## Projet de Configuration Ansible pour Linux selon les Recommandations de l'ANSSI
 
