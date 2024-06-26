@@ -1,6 +1,5 @@
 - include_tasks: full_update.yml
 - include_tasks: basic_package_list.yml
-- include_tasks: security_package_list.yml
 - include_tasks: curing_package_list.yml
 - include_tasks: office_package_list.yml
 - include_tasks: clean_files.yml
