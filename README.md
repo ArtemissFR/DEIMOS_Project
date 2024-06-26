@@ -8,7 +8,7 @@
 
 ## Projet de Configuration Ansible pour Linux selon les Recommandations de l'ANSSI
 
-ReadMe file : [Francaisl](https://github.com/ArtemissFR/DEIMOS_Project/Documentation/README_FR.md) | [English](https://github.com/ArtemissFR/DEIMOS_Project/Documentation/README_ENG.md)
+ReadMe file : [Francais](https://github.com/ArtemissFR/DEIMOS_Project/Documentation/README_FR.md) | [English](https://github.com/ArtemissFR/DEIMOS_Project/Documentation/README_ENG.md)
 
 ### Introduction
 
