@@ -1,8 +1,3 @@
-- name: Install dpkg
-  ansible.builtin.dnf:
-    name: dpkg
-    state: latest
-
 - name: Install patch
   ansible.builtin.dnf:
     name: patch
