@@ -14,6 +14,33 @@ Bienvenue dans ce projet de configuration Ansible visant à sécuriser une machi
 
 Ce projet a pour objectif de fournir un guide et un ensemble de scripts Ansible permettant d'automatiser la mise en place de configurations sécurisées sur des machines tournant sous AlmaLinux 9. En adoptant les conseils de l'ANSSI, nous visons à renforcer la sécurité de nos infrastructures tout en facilitant la gestion et la maintenance de nos systèmes.
 
+### Comment utiliser le Playbook ?
+
+1. Télécharger le dépots :
+   
+   ```bash
+   git clone https://github.com/ArtemissFR/DEIMOS_Project
+   cd DEIMOS_Project
+   ```
+
+2. Configurer l'hôte distant :
+   
+   ```bash
+   nano hosts.ini
+   ```
+
+3. Lancer le playbook :
+   
+   ```bash
+   ansible-playbook Launch_Playbook.yml
+   ```
+
+4. Lancer le playbook (localement) :
+   
+   ```bash
+   ansible-playbook Launch_Playbook_Locally.yml
+   ```
+
 ---
 
 ### Rôles
