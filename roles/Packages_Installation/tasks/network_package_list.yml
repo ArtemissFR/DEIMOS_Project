@@ -1,0 +1,4 @@
+- name: "[Basic Package] - Install patch"
+  ansible.builtin.dnf:
+    name: patch
+    state: latest
