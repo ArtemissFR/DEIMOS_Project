@@ -1,6 +1,8 @@
 
 ---
-# DEIMOS PROJECT
+<p align="center" style="color: orange; font-size: 2em;">
+  DEIMOS PROJECT
+</p>
 
 <p align="center">
   <img src="https://static.wikia.nocookie.net/rainbowsix/images/3/3a/R6S_Y9S1_Deimos_Icon.png/revision/latest?cb=20240225143037" alt="Deimos Icon" width="200"/>
