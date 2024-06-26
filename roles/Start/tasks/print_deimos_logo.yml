@@ -1,5 +1,5 @@
   - name: DEIMOS
-    ansible.builtin.shell: cat DEIMOS_logo.txt
+    ansible.builtin.shell: "cat DEIMOS_logo.txt"
     register: DEIMOS_LOGO
 
   - name: DEIMOS
