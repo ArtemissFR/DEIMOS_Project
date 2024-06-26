@@ -1,4 +1,14 @@
-- name: "[Basic Package] - Install patch"
+- name: "[Network Package] - Install nmap"
   ansible.builtin.dnf:
-    name: patch
+    name: nmap
+    state: latest
+
+- name: "[Network Package] - Install tcpdump"
+  ansible.builtin.dnf:
+    name: tcpdump
+    state: latest
+
+- name: "[Network Package] - Install wireshark"
+  ansible.builtin.dnf:
+    name: wireshark
     state: latest
