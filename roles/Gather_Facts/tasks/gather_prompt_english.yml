@@ -2,4 +2,3 @@
     pause:
       prompt: "[???] Would you like to see the informations that are gathered ? [yes/no]"
     register: GATHER_INFO_VIEW
-    when: LANGUAGE.user_input == "english"
