@@ -1,1 +1,19 @@
+- name: Install sysctl
+  ansible.builtin.dnf:
+    name: sysctl
+    state: latest
 
+- name: Install auditd
+  ansible.builtin.dnf:
+    name: auditd
+    state: latest
+
+- name: Install apparmor
+  ansible.builtin.dnf:
+    name: apparmor
+    state: latest
+
+- name: Install selinux
+  ansible.builtin.dnf:
+    name: selinux
+    state: latest
