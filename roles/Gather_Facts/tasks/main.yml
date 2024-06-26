@@ -1,8 +1,13 @@
 - name: Gather Facts
   gather_facts:
 
-- name: Launch Prompt
-  include_tasks: gather_prompt.yml
+###---PROMPT---###
+- name: Launch English Prompt
+  include_tasks: gather_prompt_english.yml
+
+- name: Launch French Prompt
+  include_tasks: gather_prompt_french.yml
+###---PROMPT---###
 
 - name: Gather OS
   include_tasks: gather_os.yml
