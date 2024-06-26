@@ -1,0 +1,5 @@
+  - name: QUESTION - Informations
+    pause:
+      prompt: "[???] Voulez vous voir les informations récupérer ? [oui/non]"
+    register: GATHER_INFO_VIEW
+    when: LANGUAGE.user_input == "french"
