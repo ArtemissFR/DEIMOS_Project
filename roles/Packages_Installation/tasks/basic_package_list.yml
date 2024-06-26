@@ -13,17 +13,32 @@
     name: lshw
     state: latest
 
-- name: "[Basic Package] - Install nmap"
+- name: "[Basic Package] - Install curl"
   ansible.builtin.dnf:
-    name: nmap
+    name: curl
     state: latest
 
-- name: "[Basic Package] - Install tcpdump"
+- name: "[Basic Package] - Install tar"
   ansible.builtin.dnf:
-    name: tcpdump
+    name: tar
+    state: latest
+    
+- name: "[Basic Package] - Install wget"
+  ansible.builtin.dnf:
+    name: wget
     state: latest
 
-- name: "[Basic Package] - Install wireshark"
+- name: "[Basic Package] - Install git"
   ansible.builtin.dnf:
-    name: wireshark
+    name: git
+    state: latest
+
+- name: "[Basic Package] - Install tree"
+  ansible.builtin.dnf:
+    name: tree
+    state: latest
+
+- name: "[Basic Package] - Install python3"
+  ansible.builtin.dnf:
+    name: python3
     state: latest
