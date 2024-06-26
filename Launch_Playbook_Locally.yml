@@ -3,7 +3,6 @@
   connection: local
 
   roles:
-    - Start
     - Language_Selection
     - Gather_Facts
     - Packages_Installation
