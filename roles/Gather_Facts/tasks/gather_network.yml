@@ -5,9 +5,9 @@
 - name: View network interface information
   debug:
     msg: "Information about network interfaces is : {{ network_info.stdout_lines }}"
-  when: GATHER_INFO_VIEW.user_input in ["oui", "yes"] and LANGUAGE.user_input == "english"
+  when: GATHER_INFO_VIEW.user_input == "oui" or GATHER_INFO_VIEW.user_input == "yes" and LANGUAGE.user_input == "english"
 
 - name: Afficher les informations sur les interfaces réseau
   debug:
     msg: "Les informations sur les interfaces réseau sont : {{ network_info.stdout_lines }}"
-  when: GATHER_INFO_VIEW.user_input in ["oui", "yes"] and LANGUAGE.user_input == "french"
+  when: GATHER_INFO_VIEW.user_input == "oui" or GATHER_INFO_VIEW.user_input == "yes" and LANGUAGE.user_input == "french"
