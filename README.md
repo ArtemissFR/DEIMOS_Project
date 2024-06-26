@@ -27,10 +27,21 @@ Ce projet a pour objectif de fournir un guide et un ensemble de scripts Ansible 
 ---
 
 ### Détails des Rôles
-#### Role 1
+#### Rôle "Language_Selection" :
+- Proposition d'un choix de la langue .
 
-#### Role 2
+#### Rôle "Gather_Facts" :
+- Récupération et affichage des informations sur le système d'exploitation ;
+- Récupération et affichage des informations sur l'espace disque ;
+- Récupération et affichage des informations sur la mémoire ;
+- Récupération et affichage des informations sur le processeur ;
+- Récupération et affichage des informations sur les processus en cours ;
+- Récupération et affichage des informations sur le réseau .
 
-#### Role 3
+#### Rôle "Packages_Installation" :
+- Mise à jour des paquets présents sur le système ;
+- Installation de paquets de base nécessaires ;
+- Installation de paquets de bureautique ;
+- Suppression des paquets inutiles pour optimiser l'espace et les performances du système .
 
 ---
