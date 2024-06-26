@@ -4,9 +4,11 @@
 ###---PROMPT---###
 - name: Launch English Prompt
   include_tasks: gather_prompt_english.yml
+  when: LANGUAGE.user_input == "english"
 
 - name: Launch French Prompt
   include_tasks: gather_prompt_french.yml
+  when: LANGUAGE.user_input == "french"
 ###---PROMPT---###
 
 - name: Gather OS
