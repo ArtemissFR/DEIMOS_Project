@@ -5,9 +5,9 @@
 - name: Show memory information
   debug:
     msg: "Memory information is : {{ memory_info.stdout_lines }}"
-  when: GATHER_INFO_VIEW.user_input in ["oui", "yes"] and LANGUAGE.user_input == "english"
+  when: GATHER_INFO_VIEW.user_input == "oui" or GATHER_INFO_VIEW.user_input == "yes" and LANGUAGE.user_input == "english"
 
 - name: Afficher les informations sur la mémoire
   debug:
     msg: "Les informations sur la mémoire sont : {{ memory_info.stdout_lines }}"
-  when: GATHER_INFO_VIEW.user_input in ["oui", "yes"] and LANGUAGE.user_input == "french"
+  when: GATHER_INFO_VIEW.user_input == "oui" or GATHER_INFO_VIEW.user_input == "yes" and LANGUAGE.user_input == "french"
