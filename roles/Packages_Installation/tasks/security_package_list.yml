@@ -1,24 +1,24 @@
-- name: [Security Package] - Install fail2ban
+- name: "[Security Package] - Install fail2ban"
   ansible.builtin.dnf:
     name: fail2ban
     state: latest
 
-- name: [Security Package] - Install ufw
+- name: "[Security Package] - Install ufw"
   ansible.builtin.dnf:
     name: ufw
     state: latest
 
-- name: [Security Package] - Install modprobe
+- name: "[Security Package] - Install modprobe"
   ansible.builtin.dnf:
     name: modprobe
     state: latest
 
-- name: [Security Package] - Install chkrootkit
+- name: "[Security Package] - Install chkrootkit"
   ansible.builtin.dnf:
     name: chkrootkit
     state: latest
 
-- name: [Security Package] - Install clamav
+- name: "[Security Package] - Install clamav"
   ansible.builtin.dnf:
     name: clamav
     state: latest
