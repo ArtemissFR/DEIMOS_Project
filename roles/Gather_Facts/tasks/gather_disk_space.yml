@@ -1,8 +1,13 @@
-- name: Récupérer les informations sur l'espace disque
+- name: Recover disk space information
   command: df -h
   register: disk_info
+
+- name: View disk space information
+  debug:
+    msg: "The disk space information is : {{ disk_info.stdout_lines }}"
+  when: GATHER_INFO_VIEW.user_input in ["oui", "yes"] and LANGUAGE.user_input == "english"
 
 - name: Afficher les informations sur l'espace disque
   debug:
     msg: "Les informations sur l'espace disque sont : {{ disk_info.stdout_lines }}"
-  when: GATHER_INFO_VIEW.user_input in ["oui", "yes"] and LANGUAGE.user_input == "english"
+  when: GATHER_INFO_VIEW.user_input in ["oui", "yes"] and LANGUAGE.user_input == "french"
