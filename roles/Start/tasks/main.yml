@@ -1,1 +1,7 @@
+  - name: DEIMOS
+    ansible.builtin.shell: cat DEIMOS_logo.txt
+    register: DEIMOS_LOGO
 
+  - name: DEIMOS
+    ansible.builtin.debug:
+      var: DEIMOS_LOGO.stdout_lines
