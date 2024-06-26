@@ -1,0 +1,8 @@
+---
+- hosts: localhost
+  connection: local
+
+  roles:
+    - Language_Selection
+    - Gather_Facts
+    - Packages_Installation
