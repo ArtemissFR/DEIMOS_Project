@@ -2,3 +2,13 @@
 - include_tasks: basic_package_list.yml
 - include_tasks: office_package_list.yml
 - include_tasks: clean_files.yml
+
+- name: Résultat
+  debug:
+     msg: "Tout les paquets on été installé correctement !"
+  when: LANGUAGE.user_input == "french"
+
+- name: Result
+  debug:
+     msg: "All the packages have been correctly installed !"
+  when: LANGUAGE.user_input == "english"
