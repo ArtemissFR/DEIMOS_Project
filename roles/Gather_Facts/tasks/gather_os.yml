@@ -10,4 +10,4 @@
 - name: Afficher l'OS de la machine distante
   debug:
     msg: "L'OS de la machine distante est : {{ os_info.stdout_lines }}"
-  when: GATHER_INFO_VIEW.user_input in ["oui", "yes"] and LANGUAGE.user_input == "french"
+  when: GATHER_INFO_VIEW.user_input == "oui" or GATHER_INFO_VIEW.user_input == "yes" and LANGUAGE.user_input == "french"
