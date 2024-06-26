@@ -1,8 +1,13 @@
-- name: Récupérer la liste des processus en cours
+- name: Retrieve the list of running processes
   command: ps aux
   register: processes_info
+
+- name: Show list of running processes
+  debug:
+    msg: "The list of running processes is : {{ processes_info.stdout_lines }}"
+  when: GATHER_INFO_VIEW.user_input in ["oui", "yes"] and LANGUAGE.user_input == "english"
 
 - name: Afficher la liste des processus en cours
   debug:
     msg: "La liste des processus en cours est : {{ processes_info.stdout_lines }}"
-  when: GATHER_INFO_VIEW.user_input in ["oui", "yes"] and LANGUAGE.user_input == "english"
+  when: GATHER_INFO_VIEW.user_input in ["oui", "yes"] and LANGUAGE.user_input == "french"
