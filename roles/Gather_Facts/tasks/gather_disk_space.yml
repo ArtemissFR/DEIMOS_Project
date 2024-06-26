@@ -2,12 +2,15 @@
   command: df -h
   register: disk_info
 
-- name: View disk space information
-  debug:
-    msg: "The disk space information is : {{ disk_info.stdout_lines }}"
-  when: GATHER_INFO_VIEW.user_input == "oui" or GATHER_INFO_VIEW.user_input == "yes" and LANGUAGE.user_input == "english"
+- name: Disk Space
+  block:
+    - name: View disk space information
+      debug:
+        msg: "The disk space information is : {{ disk_info.stdout_lines }}"
+      when: LANGUAGE.user_input == "english"
 
-- name: Afficher les informations sur l'espace disque
-  debug:
-    msg: "Les informations sur l'espace disque sont : {{ disk_info.stdout_lines }}"
-  when: GATHER_INFO_VIEW.user_input == "oui" or GATHER_INFO_VIEW.user_input == "yes" and LANGUAGE.user_input == "french"
+    - name: Afficher les informations sur l'espace disque
+      debug:
+        msg: "Les informations sur l'espace disque sont : {{ disk_info.stdout_lines }}"
+      when: LANGUAGE.user_input == "french"
+  when: GATHER_INFO_VIEW.user_input == "oui" or GATHER_INFO_VIEW.user_input == "yes"
