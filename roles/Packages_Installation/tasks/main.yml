@@ -1,3 +1,3 @@
 - include_tasks: full_update.yml
-- include_tasks: package_list.yml
+- include_tasks: basic_package_list.yml
 - include_tasks: clean_files.yml
