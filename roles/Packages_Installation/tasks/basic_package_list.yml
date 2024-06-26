@@ -1,29 +1,29 @@
-- name: [Basic Package] - Install patch
+- name: "[Basic Package] - Install patch"
   ansible.builtin.dnf:
     name: patch
     state: latest
 
-- name: [Basic Package] - Install strace
+- name: "[Basic Package] - Install strace"
   ansible.builtin.dnf:
     name: strace
     state: latest
 
-- name: [Basic Package] - Install lshw
+- name: "[Basic Package] - Install lshw"
   ansible.builtin.dnf:
     name: lshw
     state: latest
 
-- name: [Basic Package] - Install nmap
+- name: "[Basic Package] - Install nmap"
   ansible.builtin.dnf:
     name: nmap
     state: latest
 
-- name: [Basic Package] - Install tcpdump
+- name: "[Basic Package] - Install tcpdump"
   ansible.builtin.dnf:
     name: tcpdump
     state: latest
 
-- name: Install wireshark
+- name: "[Basic Package] - Install wireshark"
   ansible.builtin.dnf:
     name: wireshark
     state: latest
