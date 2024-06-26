@@ -2,12 +2,15 @@
   command: lscpu
   register: cpu_info
 
-- name: Show processor type
-  debug:
-    msg: "The processor type is : {{ cpu_info.stdout_lines }}"
-  when: GATHER_INFO_VIEW.user_input == "oui" or GATHER_INFO_VIEW.user_input == "yes" and LANGUAGE.user_input == "english"
+- name: Processor
+  block:
+    - name: Show processor type
+      debug:
+        msg: "The processor type is : {{ cpu_info.stdout_lines }}"
+      when: LANGUAGE.user_input == "english"
 
-- name: Afficher le type de processeur
-  debug:
-    msg: "Le type de processeur est : {{ cpu_info.stdout_lines }}"
-  when: GATHER_INFO_VIEW.user_input == "oui" or GATHER_INFO_VIEW.user_input == "yes" and LANGUAGE.user_input == "french"
+    - name: Afficher le type de processeur
+      debug:
+        msg: "Le type de processeur est : {{ cpu_info.stdout_lines }}"
+      when: LANGUAGE.user_input == "french"
+  when: GATHER_INFO_VIEW.user_input == "oui" or GATHER_INFO_VIEW.user_input == "yes"
