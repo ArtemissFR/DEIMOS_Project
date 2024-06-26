@@ -3,10 +3,6 @@
 # DEIMOS PROJECT
 
 <p align="center">
-  <img src="https://static.thenounproject.com/png/1662680-200.png" alt="Deimos Icon" width="200"/>
-</p>
-
-<p align="center">
   <img src="DEIMOS.png" alt="Deimos Icon" width="200"/>
 </p>
 
