@@ -2,12 +2,15 @@
   command: uname -a
   register: os_info
 
-- name: Show remote machine OS
-  debug:
-    msg: "The remote machine's OS is : {{ os_info.stdout_lines }}"
-  when: GATHER_INFO_VIEW.user_input == "oui" or GATHER_INFO_VIEW.user_input == "yes" and LANGUAGE.user_input == "english"
-
-- name: Afficher l'OS de la machine distante
-  debug:
-    msg: "L'OS de la machine distante est : {{ os_info.stdout_lines }}"
-  when: GATHER_INFO_VIEW.user_input == "oui" or GATHER_INFO_VIEW.user_input == "yes" and LANGUAGE.user_input == "french"
+- name: OS
+  block:
+    - name: Show remote machine OS
+      debug:
+        msg: "The remote machine's OS is : {{ os_info.stdout_lines }}"
+      when: LANGUAGE.user_input == "english"
+    
+    - name: Afficher l'OS de la machine distante
+      debug:
+        msg: "L'OS de la machine distante est : {{ os_info.stdout_lines }}"
+      when: LANGUAGE.user_input == "french"
+  when: GATHER_INFO_VIEW.user_input == "oui" or GATHER_INFO_VIEW.user_input == "yes"
