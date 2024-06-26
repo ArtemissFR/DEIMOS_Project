@@ -5,4 +5,4 @@
 - name: Afficher les informations sur l'espace disque
   debug:
     msg: "Les informations sur l'espace disque sont : {{ disk_info.stdout_lines }}"
-  when: GATHER_INFO_VIEW.user_input | bool
+  when: GATHER_INFO_VIEW.user_input in ["oui", "yes"] and LANGUAGE.user_input == "english"
