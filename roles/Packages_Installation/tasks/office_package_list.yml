@@ -22,8 +22,3 @@
   ansible.builtin.dnf:
     name: inkscape
     state: latest
-
-- name: [Office Package] - Install audacity
-  ansible.builtin.dnf:
-    name: audacity
-    state: latest
