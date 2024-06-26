@@ -1,3 +1,0 @@
-    - name: Lire et afficher le texte
-      debug:
-        msg: "{{ lookup('file', 'DEIMOS_logo.txt') }}"
