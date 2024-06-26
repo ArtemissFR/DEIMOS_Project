@@ -1,10 +1,10 @@
-- name: Récupérer le type de processeur
+- name: Retrieve processor type
   command: lscpu
   register: cpu_info
 
-- name: Afficher le type de processeur
+- name: Show processor type
   debug:
-    msg: "Le type de processeur est : {{ cpu_info.stdout_lines }}"
+    msg: "The processor type is : {{ cpu_info.stdout_lines }}"
   when: GATHER_INFO_VIEW.user_input in ["oui", "yes"] and LANGUAGE.user_input == "english"
 
 - name: Afficher le type de processeur
