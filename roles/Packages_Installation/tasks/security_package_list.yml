@@ -1,8 +1,3 @@
-- name: "[Security Package] - Install fail2ban"
-  ansible.builtin.dnf:
-    name: fail2ban
-    state: latest
-
 - name: "[Security Package] - Install ufw"
   ansible.builtin.dnf:
     name: ufw
