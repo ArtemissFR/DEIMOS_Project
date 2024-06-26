@@ -3,7 +3,7 @@
 # DEIMOS PROJECT
 
 <p align="center">
-  <img src="Documentation/DEIMOS.png" alt="Deimos Icon" width="600"/>
+  <img src="Documentation/DEIMOS.png" alt="Deimos Icon" width="700"/>
 </p>
 
 ## Projet de Configuration Ansible pour Linux selon les Recommandations de l'ANSSI
