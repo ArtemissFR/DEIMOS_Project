@@ -5,7 +5,7 @@
 - name: Show remote machine OS
   debug:
     msg: "The remote machine's OS is : {{ os_info.stdout_lines }}"
-  when: GATHER_INFO_VIEW.user_input in ["oui", "yes"] and LANGUAGE.user_input == "english"
+  when: GATHER_INFO_VIEW.user_input == "oui" or GATHER_INFO_VIEW.user_input == "yes" and LANGUAGE.user_input == "english"
 
 - name: Afficher l'OS de la machine distante
   debug:
