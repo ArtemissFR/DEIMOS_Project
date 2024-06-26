@@ -23,7 +23,7 @@
     name: clamav
     state: latest
 
-- name: Install lyre
+- name: "[Security Package] - Install lyre"
   ansible.builtin.dnf:
     name: lyre
     state: latest
