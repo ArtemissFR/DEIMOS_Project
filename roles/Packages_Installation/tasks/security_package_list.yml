@@ -1,8 +1,3 @@
-- name: "[Security Package] - Install modprobe"
-  ansible.builtin.dnf:
-    name: modprobe
-    state: latest
-
 - name: "[Security Package] - Install chkrootkit"
   ansible.builtin.dnf:
     name: chkrootkit
