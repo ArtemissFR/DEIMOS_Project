@@ -1,0 +1,29 @@
+- name: Install fail2ban
+  ansible.builtin.dnf:
+    name: fail2ban
+    state: latest
+
+- name: Install ufw
+  ansible.builtin.dnf:
+    name: ufw
+    state: latest
+
+- name: Install modprobe
+  ansible.builtin.dnf:
+    name: modprobe
+    state: latest
+
+- name: Install chkrootkit
+  ansible.builtin.dnf:
+    name: chkrootkit
+    state: latest
+
+- name: Install clamav
+  ansible.builtin.dnf:
+    name: clamav
+    state: latest
+
+- name: Install lyre
+  ansible.builtin.dnf:
+    name: lyre
+    state: latest
