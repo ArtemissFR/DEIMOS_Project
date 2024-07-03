@@ -42,3 +42,8 @@
   ansible.builtin.dnf:
     name: python3
     state: latest
+
+- name: "[Basic Package] - Install rmlint"
+  ansible.builtin.dnf:
+    name: rmlint
+    state: latest
