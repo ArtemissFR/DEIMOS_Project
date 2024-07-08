@@ -3,7 +3,7 @@
 </p>
 
 # Indication
-- ## ✔️ = Fait
+- ## ✔️ = Fait | A tester
 - ## ❌ = A faire
 - ## ⚠️ = A confirmer
 - ## 🔜 = Solution trouver
