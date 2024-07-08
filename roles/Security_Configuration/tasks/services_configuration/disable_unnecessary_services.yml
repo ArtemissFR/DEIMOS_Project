@@ -4,10 +4,9 @@
         state: stopped
         enabled: no
       with_items:
-        - dbus
-        - hald
-        - ConsoleKit
-        - CUPS
-        - PolicyKit
         - avahi-daemon
-        - xorg-x11-server-Xorg
+        - bluetooth
+        - cups
+        - ModemManager
+        - postfix
+        - rpcbind
