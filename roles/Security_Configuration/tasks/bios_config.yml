@@ -15,12 +15,6 @@
       notify:
         - Update Grub
 
-    - name: Désactiver IPv6 si non utilisé
-      sysctl:
-        name: net.ipv6.conf.all.disable_ipv6
-        value: 1
-        state: present
-
     - name: Update Grub
       command: grub2-mkconfig -o /boot/grub2/grub.cfg
       notify:
