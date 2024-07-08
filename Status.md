@@ -97,7 +97,7 @@
 ### 7.2.3 - Journalisation
   - [R71] Mettre en place un système de journalisation : status = ❌ | 🔜 (Surveillance : Prometheus/ELK Stack/Kibana)
   - [R72] Mettre en place des journaux d'activité de service dédiés : status = ❌ | 🔜 (Surveillance : Prometheus/ELK Stack/Kibana)
-  - [R73] Journaliser l'activité système avec auditd : status = ❌
+  - [R73] Journaliser l'activité système avec auditd : status = ✔️
 ### 7.2.4 - Messagerie
   - [R74] Durcir le service de messagerie locale : status = 💭
   - [R75] Configurer un alias de messagerie des comptes de service : status = 💭
