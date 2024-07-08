@@ -1,3 +1,5 @@
+# --- [R3] --- #
+
     - name: Ensure UEFI Secure Boot is enabled
       command: mokutil --sb-state
       register: secure_boot_status
@@ -6,3 +8,5 @@
     - name: Enable UEFI Secure Boot if not enabled
       command: mokutil --enable-validation
       when: secure_boot_status.stdout != "SecureBoot enabled"
+
+# --- [R3] --- #
