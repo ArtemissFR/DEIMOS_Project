@@ -1,0 +1,9 @@
+    - name: QUESTION - Password Generation
+      pause:
+        prompt: "[???] Choose a language for the execution of the playbook [french/english]"
+      register: password_file
+
+    - name: QUESTION - Génération des mots de passe
+      pause:
+        prompt: "[???] Choose a language for the execution of the playbook [french/english]"
+      register: password_file
