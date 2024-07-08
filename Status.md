@@ -2,6 +2,8 @@
   <img src="Documentation/DEIMOS.png" alt="Deimos Icon" width="700"/>
 </p>
 
+![Un GIF amusant](https://media.giphy.com/media/3o6ozmxyUyIiv1cZrG/giphy.gif)
+
 # Indication
 - ## ✔️ = Fait | A tester
 - ## ❌ = A faire
