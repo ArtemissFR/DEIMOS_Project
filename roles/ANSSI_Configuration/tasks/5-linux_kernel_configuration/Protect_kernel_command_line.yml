@@ -1,0 +1,29 @@
+    - name: Ensure 'dracut' package is installed
+      yum:
+        name: dracut
+        state: present
+
+    - name: Update permissions of /boot/grub2/grub.cfg to be readable only by root
+      file:
+        path: /boot/grub2/grub.cfg
+        owner: root
+        group: root
+        mode: '0400'
+
+    - name: Update permissions of /boot/efi/EFI/almalinux/grub.cfg to be readable only by root
+      file:
+        path: /boot/efi/EFI/almalinux/grub.cfg
+        owner: root
+        group: root
+        mode: '0400'
+
+    - name: Ensure initramfs file is protected
+      command: /usr/bin/dracut -f
+      args:
+        warn: false
+      notify:
+        - Reload initramfs
+
+  handlers:
+    - name: Reload initramfs
+      command: /usr/sbin/dracut --force
