@@ -1,0 +1,13 @@
+# --- [R10] --- #
+
+    - name: Disable kernel module loading via sysctl
+      lineinfile:
+        path: /etc/sysctl.conf
+        state: present
+        regexp: '^kernel.modules_disabled'
+        line: 'kernel.modules_disabled = 1'
+
+    - name: Apply sysctl changes
+      command: sysctl -p
+
+# --- [R10] --- #
