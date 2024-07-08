@@ -30,34 +30,34 @@
 ## 5.2 - Configuration dynamique
   - [R6] Protéger les paramètres de ligne de commande du noyau et l'initramfs : status = ❌
 ### 5.2.1 - Configuration de la mémoire
-  - [R7] Activer l'IOMMU : status = ❌
-  - [R8] Paramétrer les options de configuration de la mémoire : status = ❌
+  - [R7] Activer l'IOMMU : status = ✔️
+  - [R8] Paramétrer les options de configuration de la mémoire : status = ⚠️
 ### 5.2.2 - Configuration du noyau
-  - [R9] Paramétrer les options de configuration du noyau : status = ❌
+  - [R9] Paramétrer les options de configuration du noyau : status = ⚠️
   - [R10] Désactiver le chargement des modules noyau : status = ❌
 ### 5.2.3 - Configuration des processus
   - [R11] Activer et configurer le LSM Yama : status = ❌
 ### 5.2.4 - Configuration du réseau
-  - [R12] Paramétrer les options de configuration du réseau IPv4 : status = ❌
-  - [R13] Désactiver le plan IPv6 : status = ❌
+  - [R12] Paramétrer les options de configuration du réseau IPv4 : status = ⚠️
+  - [R13] Désactiver le plan IPv6 : status = ✔️
 ### 5.2.5 - Configuration des systèmes de fichiers
   - [R14] Paramétrer les options de configuration des systèmes de fichiers : status = ❌
 ## 5.3 - Configuration statique
 ### 5.3.1 - Configuration indépendante de la cible matérielle
-  - [R15] Paramétrer les options de compilation pour la gestion de la mémoire : status = ❌
-  - [R16] Paramétrer les options de compilation pour les structures de données du noyau : status = ❌
-  - [R17] Paramétrer les options de compilation pour l'allocateur mémoire : status = ❌
-  - [R18] Paramétrer les options de compilation pour la gestion des modules noyau : status = ❌
-  - [R19] Paramétrer les options de compilation pour les évènements anormaux : status = ❌
-  - [R20] Paramétrer les options de compilation pour les primitives de sécurité du noyau : status = ❌
-  - [R21] Paramétrer les options de compilation pour les plugins du compilateur : status = ❌
-  - [R22] Paramétrer les options de compilation pour la pile réseau : status = ❌
-  - [R23] Paramétrer les options de compilation pour divers comportements du noyau : status = ❌
+  - [R15] Paramétrer les options de compilation pour la gestion de la mémoire : status = 💭
+  - [R16] Paramétrer les options de compilation pour les structures de données du noyau : status = 💭
+  - [R17] Paramétrer les options de compilation pour l'allocateur mémoire : status = 💭
+  - [R18] Paramétrer les options de compilation pour la gestion des modules noyau : status = 💭
+  - [R19] Paramétrer les options de compilation pour les évènements anormaux : status = 💭
+  - [R20] Paramétrer les options de compilation pour les primitives de sécurité du noyau : status = 💭
+  - [R21] Paramétrer les options de compilation pour les plugins du compilateur : status = 💭
+  - [R22] Paramétrer les options de compilation pour la pile réseau : status = 💭
+  - [R23] Paramétrer les options de compilation pour divers comportements du noyau : status = 💭
 ### 5.3.2 - Configuration spécifique aux architectures matérielles
-  - [R24] Paramétrer les options de compilation spécifiques aux architectures 32 bits : status = ❌
-  - [R25] Paramétrer les options de compilation spécifiques aux architectures x86_64 bits : status = ❌
-  - [R26] Paramétrer les options de compilation spécifiques aux architectures ARM : status = ❌
-  - [R27] Paramétrer les options de compilation spécifiques aux architectures ARM 64 bits : status = ❌
+  - [R24] Paramétrer les options de compilation spécifiques aux architectures 32 bits : status = 💭
+  - [R25] Paramétrer les options de compilation spécifiques aux architectures x86_64 bits : status = 💭
+  - [R26] Paramétrer les options de compilation spécifiques aux architectures ARM : status = 💭
+  - [R27] Paramétrer les options de compilation spécifiques aux architectures ARM 64 bits : status = 💭
 
 ---
 
