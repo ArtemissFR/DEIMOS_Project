@@ -2,8 +2,6 @@
   <img src="Documentation/DEIMOS.png" alt="Deimos Icon" width="700"/>
 </p>
 
-![Un GIF amusant](https://i.gifer.com/ZWdx.gif)
-
 # Indication
 - ## ✔️ = Fait | A tester
 - ## ❌ = A faire
