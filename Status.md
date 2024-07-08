@@ -45,6 +45,6 @@
   - [R76] Sceller et vérifier l'intégrité des fichiers : status = ❌
   - [R77] Protéger la base de données des scellés : status = ❌
 ## 7.3 Services réseau
-  - [R78] Cloisonner les services réseau : status = 🔜 (Docker)
-  - [R79] Durcir et surveiller les services exposés : status = 🔜 (Configuration + MAJ auto | Surveillance : Prometheus/ELK Stack/Kibana)
-  - [R80] Réduire la surface d'attaque des services réseau : status = 🔜 (Pare-feu : ufw | Protection :  fail2ban)
+  - [R78] Cloisonner les services réseau : status = ❌ | 🔜 (Docker)
+  - [R79] Durcir et surveiller les services exposés : status = ❌ | 🔜 (Configuration + MAJ auto | Surveillance : Prometheus/ELK Stack/Kibana)
+  - [R80] Réduire la surface d'attaque des services réseau : status = ❌ | 🔜 (Pare-feu : ufw | Protection :  fail2ban)
