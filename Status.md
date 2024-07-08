@@ -13,12 +13,12 @@
 
 # 4 - Configuration matérielle
 ## 4.1 - Support matériel
-  - [R1] Choisir et configurer son matériel : status = ❌
+  - [R1] Choisir et configurer son matériel : status = ✔️
 ## 4.2 - BIOS/UEFI
-  - [R2] Configurer le BIOS/UEFI : status = ❌
+  - [R2] Configurer le BIOS/UEFI : status = ✔️
 ## 4.3 - Démarrage sécurisé UEFI
 ### 4.3.1 - Clés préchargées
-  - [R3] Activer le démarrage sécurisé UEFI : status = ❌
+  - [R3] Activer le démarrage sécurisé UEFI : status = ✔️
 ### 4.3.2 - Nouvelles clés
   - [R4] Remplacer les clés préchargées : status = ❌
 
