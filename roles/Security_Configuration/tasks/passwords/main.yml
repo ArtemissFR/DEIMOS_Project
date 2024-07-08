@@ -2,10 +2,12 @@
       pause:
         prompt: "[???] Choose a language for the execution of the playbook [french/english]"
       register: password_file
+      when: LANGUAGE.user_input == "english"
 
     - name: QUESTION - Génération des mots de passe
       pause:
         prompt: "[???] Choose a language for the execution of the playbook [french/english]"
       register: password_file
+      when: LANGUAGE.user_input == "french"
 
     - include_tasks: password_generation.yml
