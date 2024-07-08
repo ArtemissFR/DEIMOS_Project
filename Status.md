@@ -20,7 +20,7 @@
 ### 4.3.1 - Clés préchargées
   - [R3] Activer le démarrage sécurisé UEFI : status = ✔️
 ### 4.3.2 - Nouvelles clés
-  - [R4] Remplacer les clés préchargées : status = ❌
+  - [R4] Remplacer les clés préchargées : status = ⚠️
 
 ---
 
