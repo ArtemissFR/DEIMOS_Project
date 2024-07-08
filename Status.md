@@ -28,7 +28,7 @@
 ## 5.1 - Chargeur de démarrage
   - [R5] Configurer un mot de passe pour le chargeur de démarrage : status = ❌
 ## 5.2 - Configuration dynamique
-  - [R6] Protéger les paramètres de ligne de commande du noyau et l'initramfs : status = ❌
+  - [R6] Protéger les paramètres de ligne de commande du noyau et l'initramfs : status = ✔️
 ### 5.2.1 - Configuration de la mémoire
   - [R7] Activer l'IOMMU : status = ✔️
   - [R8] Paramétrer les options de configuration de la mémoire : status = ⚠️
