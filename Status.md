@@ -9,6 +9,8 @@
 - ## 🔜 = Solution trouver
 - ## 💭 = Voir plus tard | Pas important
 
+---
+
 # 4 - Configuration matérielle
 ## 4.1 - Support matériel
   - [R1] Choisir et configurer son matériel : status = ❌
