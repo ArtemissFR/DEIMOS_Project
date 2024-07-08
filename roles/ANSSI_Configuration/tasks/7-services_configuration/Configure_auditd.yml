@@ -1,0 +1,37 @@
+# --- [R73] --- #
+
+    - name: Install the auditd package
+      dnf:
+        name: audit
+        state: present
+
+    - name: Ensure auditd service is enabled
+      systemd:
+        name: auditd
+        state: started
+        enabled: yes
+
+    - name: Configure auditd rules
+      copy:
+        dest: /etc/audit/rules.d/audit.rules
+        content: |
+          -w /etc/passwd -p wa -k identity
+          -w /etc/shadow -p wa -k identity
+          -w /etc/group -p wa -k identity
+          -w /etc/gshadow -p wa -k identity
+          -w /var/log/lastlog -p wa -k identity
+          -w /var/log/tallylog -p wa -k identity
+          -a always,exit -F arch=b64 -S execve
+          -a always,exit -F arch=b32 -S execve
+          -a always,exit -F arch=b64 -S open,openat
+          -a always,exit -F arch=b32 -S open,openat
+        owner: root
+        group: root
+        mode: '0600'
+
+    - name: Restart auditd to apply the new rules
+      systemd:
+        name: auditd
+        state: restarted
+
+# --- [R73] --- #
