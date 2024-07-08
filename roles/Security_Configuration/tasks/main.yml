@@ -1,0 +1,11 @@
+- include_tasks: full_update.yml
+
+- name: Résultat
+  debug:
+     msg: "Votre machine Linux a bien été configurer !"
+  when: LANGUAGE.user_input == "french"
+
+- name: Result
+  debug:
+     msg: "Your Linux machine has been successfully configured !"
+  when: LANGUAGE.user_input == "english"
