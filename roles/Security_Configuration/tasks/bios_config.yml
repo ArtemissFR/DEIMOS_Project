@@ -1,0 +1,24 @@
+    - name: Ensure UEFI Secure Boot is enabled
+      command: mokutil --sb-state
+      register: secure_boot_status
+      ignore_errors: yes
+
+    - name: Enable UEFI Secure Boot if not enabled
+      command: mokutil --enable-validation
+      when: secure_boot_status.stdout != "SecureBoot enabled"
+
+    - name: Enable IOMMU
+      lineinfile:
+        path: /etc/default/grub
+        regexp: '^GRUB_CMDLINE_LINUX_DEFAULT='
+        line: 'GRUB_CMDLINE_LINUX_DEFAULT="quiet splash iommu=force"'
+      notify:
+        - Update Grub
+
+    - name: Update Grub
+      command: grub2-mkconfig -o /boot/grub2/grub.cfg
+      notify:
+        - Reboot Server
+
+    - name: Reboot Server
+      reboot:
