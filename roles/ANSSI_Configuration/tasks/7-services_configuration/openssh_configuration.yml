@@ -1,0 +1,77 @@
+    - name: Ensure OpenSSH Server is installed
+      ansible.builtin.package:
+        name: openssh-server
+        state: present
+
+    - name: Backup the current sshd_config
+      ansible.builtin.copy:
+        src: /etc/ssh/sshd_config
+        dest: /etc/ssh/sshd_config.bak
+        remote_src: yes
+
+    - name: Disable root login
+      ansible.builtin.lineinfile:
+        path: /etc/ssh/sshd_config
+        regexp: '^#?PermitRootLogin'
+        line: 'PermitRootLogin no'
+        state: present
+
+    - name: Ensure PubkeyAuthentication is enabled
+      ansible.builtin.lineinfile:
+        path: /etc/ssh/sshd_config
+        regexp: '^#?PubkeyAuthentication'
+        line: 'PubkeyAuthentication yes'
+        state: present
+
+    - name: Ensure PasswordAuthentication is disabled
+      ansible.builtin.lineinfile:
+        path: /etc/ssh/sshd_config
+        regexp: '^#?PasswordAuthentication'
+        line: 'PasswordAuthentication no'
+        state: present
+
+    - name: Restart SSH service
+      ansible.builtin.service:
+        name: ssh
+        state: restarted
+
+    - name: Generate a new SSH key pair
+      ansible.builtin.openssh_keypair:
+        path: /home/{{ ansible_user }}/.ssh/id_rsa
+        type: rsa
+        size: 4096
+        force: yes
+        owner: "{{ ansible_user }}"
+        group: "{{ ansible_user }}"
+        mode: '0600'
+
+    - name: Display the public key
+      ansible.builtin.command: cat /home/{{ ansible_user }}/.ssh/id_rsa.pub
+      register: ssh_pub_key
+
+    - name: Output the public key
+      ansible.builtin.debug:
+        msg: "{{ ssh_pub_key.stdout }}"
+
+    - name: Ensure .ssh directory exists on remote hosts
+      ansible.builtin.file:
+        path: /home/{{ ansible_user }}/.ssh
+        state: directory
+        mode: '0700'
+        owner: "{{ ansible_user }}"
+        group: "{{ ansible_user }}"
+
+    - name: Copy the public key to authorized_keys
+      ansible.builtin.copy:
+        src: /home/{{ ansible_user }}/.ssh/id_rsa.pub
+        dest: /home/{{ ansible_user }}/.ssh/authorized_keys
+        owner: "{{ ansible_user }}"
+        group: "{{ ansible_user }}"
+        mode: '0600'
+
+    - name: Set proper permissions for the private key
+      ansible.builtin.file:
+        path: /home/{{ ansible_user }}/.ssh/id_rsa
+        owner: "{{ ansible_user }}"
+        group: "{{ ansible_user }}"
+        mode: '0600'
