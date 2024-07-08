@@ -54,7 +54,7 @@ Ce projet a pour objectif de fournir un guide et un ensemble de scripts Ansible 
 | **Language_Selection**  | Un rôle permettant de choisir la langue utilisée pour la suite du playbook. |
 | **Gather_Facts**  | Un rôle pour récupérer et afficher des informations sur le matériel de la machine distante. |
 | **Packages_Installation**  | Un rôle pour installer des packages recommandés sur la machine distante. |
-| **Security_Configuration**  | Un rôle pour configurer des paramètres afin de correspondre aux recommandations de l'ANSSI. |
+| **ANSSI_Configuration**  | Un rôle pour configurer des paramètres afin de correspondre aux recommandations de l'ANSSI. |
 
 
 ### Détails des Rôles
