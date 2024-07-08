@@ -36,9 +36,9 @@
   - [R9] Paramétrer les options de configuration du noyau : status = ⚠️
   - [R10] Désactiver le chargement des modules noyau : status = ✔️
 ### 5.2.3 - Configuration des processus
-  - [R11] Activer et configurer le LSM Yama : status = ❌
+  - [R11] Activer et configurer le LSM Yama : status = ✔️
 ### 5.2.4 - Configuration du réseau
-  - [R12] Paramétrer les options de configuration du réseau IPv4 : status = ⚠️
+  - [R12] Paramétrer les options de configuration du réseau IPv4 : status = ✔️
   - [R13] Désactiver le plan IPv6 : status = ✔️
 ### 5.2.5 - Configuration des systèmes de fichiers
   - [R14] Paramétrer les options de configuration des systèmes de fichiers : status = ❌
