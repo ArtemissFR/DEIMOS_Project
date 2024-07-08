@@ -2,6 +2,8 @@
   <img src="Documentation/DEIMOS.png" alt="Deimos Icon" width="700"/>
 </p>
 
+# Progression : [█████-------------] 25%
+
 # Indication
 - ## ✔️ = Fait | A tester
 - ## ❌ = A faire
