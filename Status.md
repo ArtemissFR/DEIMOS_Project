@@ -34,7 +34,7 @@
   - [R8] Paramétrer les options de configuration de la mémoire : status = ⚠️
 ### 5.2.2 - Configuration du noyau
   - [R9] Paramétrer les options de configuration du noyau : status = ⚠️
-  - [R10] Désactiver le chargement des modules noyau : status = ❌
+  - [R10] Désactiver le chargement des modules noyau : status = ✔️
 ### 5.2.3 - Configuration des processus
   - [R11] Activer et configurer le LSM Yama : status = ❌
 ### 5.2.4 - Configuration du réseau
