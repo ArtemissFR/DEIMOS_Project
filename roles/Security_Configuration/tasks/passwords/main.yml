@@ -1,12 +1,12 @@
     - name: QUESTION - Password Generation
       pause:
-        prompt: "[???] Choose a language for the execution of the playbook [french/english]"
+        prompt: "[???] In which file do you want to save secure passwords ? (example : /path/to/file/test.txt)"
       register: password_file
       when: LANGUAGE.user_input == "english"
 
     - name: QUESTION - Génération des mots de passe
       pause:
-        prompt: "[???] Choose a language for the execution of the playbook [french/english]"
+        prompt: "[???] Dans quelle fichier voulez vous enregistrer les mots de passe sécurisé ? (exemple : /chemin/du/fichier/test.txt)"
       register: password_file
       when: LANGUAGE.user_input == "french"
 
