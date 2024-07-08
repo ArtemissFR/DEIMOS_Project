@@ -1,0 +1,21 @@
+# --- [R11] --- #
+
+    - name: Create a configuration file for Yama
+      copy:
+        dest: /etc/sysctl.d/99-yama.conf
+        content: |
+          # Enable and configure Yama
+          kernel.yama.ptrace_scope = 1
+
+    - name: Apply sysctl parameters
+      command: sysctl --system
+
+    - name: Verify Yama configuration
+      sysctl:
+        name: kernel.yama.ptrace_scope
+        value: 1
+        sysctl_set: yes
+        ignoreerrors: yes
+        state: present
+
+# --- [R11] --- #
