@@ -1,3 +1,5 @@
+# --- [R4] --- #
+
     - name: Ensure efibootmgr is installed
       ansible.builtin.yum:
         name: efibootmgr
@@ -23,3 +25,5 @@
     - name: Display efibootmgr output
       debug:
         var: efibootmgr_output.stdout
+
+# --- [R4] --- #
