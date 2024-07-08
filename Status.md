@@ -25,8 +25,8 @@
   - [R63] Désactiver les fonctionnalités des services non essentielles : status = ❌
   - [R64] Configurer les privilèges des services : status = ❌
 ## 7.1 - Cloisonnement
-  - [R65] Cloisonner les services : status = ❌
-  - [R66] Durcir les composants de cloisonnement : status = ❌
+  - [R65] Cloisonner les services : status = ❌ | 🔜 (Docker)
+  - [R66] Durcir les composants de cloisonnement : status = ❌ | 🔜 (Docker)
 ## 7.2 - Services système
 ### 7.2.1 - Pluggable Authentication Module ou module d'authentification enfichable
   - [R67] Sécuriser les authentifications distante par PAM : status = ❌
@@ -35,8 +35,8 @@
   - [R69] Sécuriser les accès aux bases utilisateur distantes : status = ❌
   - [R70] Séparer les comptes système et d'administrateur de l'annuaire : status = ❌
 ### 7.2.3 - Journalisation
-  - [R71] Mettre en place un système de journalisation : status = ❌
-  - [R72] Mettre en place des journaux d'activité de service dédiés : status = ❌
+  - [R71] Mettre en place un système de journalisation : status = ❌ | 🔜 (Surveillance : Prometheus/ELK Stack/Kibana)
+  - [R72] Mettre en place des journaux d'activité de service dédiés : status = ❌ | 🔜 (Surveillance : Prometheus/ELK Stack/Kibana)
   - [R73] Journaliser l'activité système avec auditd : status = ❌
 ### 7.2.4 - Messagerie
   - [R74] Durcir le service de messagerie locale : status = ❌
