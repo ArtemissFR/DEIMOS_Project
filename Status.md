@@ -25,10 +25,35 @@
 ---
 
 # 5 - Configuration du noyau Linux
+## 5.1 Chargeur de démarrage
+## 5.2 Configuration dynamique
+### 5.2.1 Configuration de la mémoire
+### 5.2.2 Configuration du noyau
+### 5.2.3 Configuration des processus
+### 5.2.4 Configuration du réseau
+### 5.2.5 Configuration des systèmes de fichiers
+## 5.3 Configuration statique
+### 5.3.1 Configuration indépendante de la cible matérielle
+### 5.3.2 Configuration spécifique aux architectures matérielles
 
 ---
 
 # 6 - Configuration système
+## 6.1 Partitionnement
+## 6.2 Comptes d'accès
+### 6.2.1 Comptes utilisateur
+### 6.2.2 Comptes administrateur
+### 6.2.3 Comptes de service
+## 6.3 Contrôle d'accès
+### 6.3.1 Modèle traditionnel Unix
+### 6.3.2 AppArmor
+### 6.3.3 SELinux
+## 6.4 Fichiers et répertoires
+### 6.4.1 Fichiers et répertoires sensibles
+### 6.4.2 Fichiers IPC nommés, sockets ou pipes
+### 6.4.3 Droits d'accès
+## 6.5 Gestion des paquets
+## 6.6 Veille et maintenance
 
 ---
 
