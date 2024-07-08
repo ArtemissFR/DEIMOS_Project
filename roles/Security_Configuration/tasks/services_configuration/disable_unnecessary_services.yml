@@ -4,9 +4,9 @@
         state: stopped
         enabled: no
       with_items:
-        - avahi-daemon
+        - avahi-daemon # Utilisé pour la découverte de services réseau
         - bluetooth
-        - cups
-        - ModemManager
-        - postfix
-        - rpcbind
+        - cups # Service d'impression
+        - ModemManager # Nécessaire seulement si tu utilises un modem pour la connectivité
+        - postfix # Serveur de mail
+        - rpcbind # Remote Procedure Call
