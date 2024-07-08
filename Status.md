@@ -10,6 +10,12 @@
 - ## 💭 = Voir plus tard | Pas important
 
 # 4 - Configuration matérielle
+## 4.1 - Support matériel
+## 4.2 - BIOS/UEFI
+## 4.3 - Démarrage sécurisé UEFI
+### 4.3.1 - Clés préchargées
+### 4.3.2 - Nouvelles clés
+## 4.4 - Démarrage de confiance
 
 ---
 
