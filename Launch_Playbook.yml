@@ -1,5 +1,5 @@
 ---
-- hosts: Target
+- hosts: Target # <--- Edit "hosts.ini" file if not done
   become: yes
 
   roles:
