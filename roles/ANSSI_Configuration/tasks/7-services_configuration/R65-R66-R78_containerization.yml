@@ -40,7 +40,7 @@
         dest: /etc/docker/daemon.json
         content: |
           {
-            "icc": false,
+            "icc": true,
             "userns-remap": "default",
             "no-new-privileges": true,
             "live-restore": true,
