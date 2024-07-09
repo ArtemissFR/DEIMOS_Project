@@ -1,7 +1,18 @@
+# --- [R1] -> [R4] --- #
 - include_tasks: "4-hardware_configuration/main.yml"
+# --- [R1] -> [R4] --- #
+
+# --- [R5] -> [R27] --- #
 - include_tasks: "5-linux_kernel_configuration/main.yml"
+# --- [R5] -> [R27] --- #
+
+# --- [R28] -> [R61] --- #
 - include_tasks: "6-system_configuration/main.yml"
+# --- [R28] -> [R61] --- #
+
+# --- [R62] -> [R80] --- #
 - include_tasks: "7-services_configuration/main.yml"
+# --- [R62] -> [R80] --- #
 
 - name: Résultat
   debug:
