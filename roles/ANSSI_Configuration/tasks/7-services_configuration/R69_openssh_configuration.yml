@@ -1,3 +1,5 @@
+# --- [R69] --- #
+
     - name: Ensure OpenSSH Server is installed
       ansible.builtin.package:
         name: openssh-server
@@ -75,3 +77,5 @@
         owner: "{{ ansible_user }}"
         group: "{{ ansible_user }}"
         mode: '0600'
+
+# --- [R69] --- #
