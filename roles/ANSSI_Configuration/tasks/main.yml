@@ -1,4 +1,7 @@
-- include_tasks: full_update.yml
+- include_tasks: "4-hardware_configuration/main.yml"
+- include_tasks: "5-linux_kernel_configuration/main.yml"
+- include_tasks: "6-system_configuration/main.yml"
+- include_tasks: "7-services_configuration/main.yml"
 
 - name: Résultat
   debug:
