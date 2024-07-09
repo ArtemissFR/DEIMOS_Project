@@ -1,3 +1,5 @@
+# --- [R6] --- #
+
     - name: Ensure 'dracut' package is installed
       yum:
         name: dracut
@@ -27,3 +29,5 @@
   handlers:
     - name: Reload initramfs
       command: /usr/sbin/dracut --force
+
+# --- [R6] --- #
