@@ -68,7 +68,7 @@
 ## 6.2 - Comptes d'accès
 ### 6.2.1 - Comptes utilisateur
   - [R30] Désactiver les comptes utilisateur inutilisés : status = ❌
-  - [R31] Utiliser des mots de passe robustes : status = ❌
+  - [R31] Utiliser des mots de passe robustes : status = ⚠️
   - [R32] Éxpirer les sessions utilisateur locales : status = ❌
 ### 6.2.2 - Comptes administrateur
   - [R33] Assurer l'imputabilité des actions d'administration : status = ❌
@@ -106,11 +106,11 @@
   - [R56] Éviter l'usage d'exécutables avec les droits spéciaux setuid et setgid : status = ❌
   - [R57] Éviter l'usage d'exécutables avec les droits spéciaux setuid root et setgid root : status = ❌
 ## 6.5 - Gestion des paquets
-  - [R58] N'installer que les paquets strictement nécessaires : status = ❌
+  - [R58] N'installer que les paquets strictement nécessaires : status = ⚠️
   - [R59] Utiliser des dépôts de paquets de confiance : status = ❌
   - [R60] Utiliser des dépôts de paquets durcis : status = ❌
 ## 6.6 - Veille et maintenance
-  - [R61] Effectuer des mises à jour régulières : status = ❌
+  - [R61] Effectuer des mises à jour régulières : status = ⚠️
 
 ---
 
