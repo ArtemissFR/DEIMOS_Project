@@ -126,7 +126,7 @@
   - [R67] Sécuriser les authentifications distante par PAM : status = 💭
   - [R68] Protéger les mots de passe stockés  : status = ⚠️
 ### 7.2.2 - Name Service Switch ou service de gestion de noms
-  - [R69] Sécuriser les accès aux bases utilisateur distantes : status = ❌
+  - [R69] Sécuriser les accès aux bases utilisateur distantes : status = ❌ | 🔜 (Config OpenSSH)
   - [R70] Séparer les comptes système et d'administrateur de l'annuaire : status = ❌
 ### 7.2.3 - Journalisation
   - [R71] Mettre en place un système de journalisation : status = ❌ | 🔜 (Surveillance : Prometheus/ELK Stack/Kibana)
@@ -139,6 +139,6 @@
   - [R76] Sceller et vérifier l'intégrité des fichiers : status = 💭
   - [R77] Protéger la base de données des scellés : status = 💭
 ## 7.3 Services réseau
-  - [R78] Cloisonner les services réseau : status = ❌ | 🔜 (Docker)
+  - [R78] Cloisonner les services réseau : status = ✔️ | 🔜 (Docker)
   - [R79] Durcir et surveiller les services exposés : status = ❌ | 🔜 (Configuration + MAJ auto | Surveillance : Prometheus/ELK Stack/Kibana)
   - [R80] Réduire la surface d'attaque des services réseau : status = ❌ | 🔜 (Pare-feu : ufw | Protection :  fail2ban)
