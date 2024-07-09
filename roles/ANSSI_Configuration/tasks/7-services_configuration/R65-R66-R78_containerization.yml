@@ -56,7 +56,7 @@
         group: root
         mode: '0644'
 
-# "icc": false: Disables inter-container communication.
+# "icc": true: Allow inter-container communication.
 # "userns-remap": "default": Enables user namespace remapping.
 # "no-new-privileges": true: Prevents containers from gaining new privileges.
 # "live-restore": true: Allows containers to continue running if the Docker daemon is restarted.
