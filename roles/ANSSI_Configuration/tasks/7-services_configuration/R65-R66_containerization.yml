@@ -1,0 +1,64 @@
+# --- [R65 - R66] --- #
+
+    - name: Install necessary dependencies
+      dnf:
+        name:
+          - dnf-plugins-core
+          - device-mapper-persistent-data
+          - lvm2
+        state: present
+
+    - name: Add Docker repository
+      dnf:
+        name: https://download.docker.com/linux/centos/docker-ce.repo
+        state: present
+
+    - name: Install Docker
+      dnf:
+        name:
+          - docker-ce
+          - docker-ce-cli
+          - containerd.io
+        state: present
+
+    - name: Start and enable Docker
+      systemd:
+        name: docker
+        state: started
+        enabled: yes
+
+    - name: Create Docker configuration directory
+      file:
+        path: /etc/docker
+        state: directory
+        owner: root
+        group: root
+        mode: '0755'
+
+    - name: Configure Docker hardening options
+      copy:
+        dest: /etc/docker/daemon.json
+        content: |
+          {
+            "icc": false,
+            "userns-remap": "default",
+            "no-new-privileges": true,
+            "live-restore": true,
+            "userland-proxy": false,
+            "disable-legacy-registry": true,
+            "log-level": "warn",
+            "experimental": false,
+            "insecure-registries": [],
+            "max-concurrent-downloads": 3,
+            "max-concurrent-uploads": 3
+          }
+        owner: root
+        group: root
+        mode: '0644'
+
+    - name: Restart Docker to apply changes
+      systemd:
+        name: docker
+        state: restarted
+
+# --- [R65 - R66] --- #
