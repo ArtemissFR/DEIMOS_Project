@@ -1,0 +1,50 @@
+# --- [R59] --- #
+
+    - name: Ensure EPEL repository is enabled
+      yum:
+        name: epel-release
+        state: present
+
+    - name: Add AlmaLinux BaseOS repository
+      yum_repository:
+        name: baseos
+        description: AlmaLinux 9 - BaseOS
+        baseurl: http://repo.almalinux.org/almalinux/9/BaseOS/x86_64/os/
+        enabled: yes
+        gpgcheck: yes
+        gpgkey: http://repo.almalinux.org/almalinux/RPM-GPG-KEY-AlmaLinux
+
+    - name: Add AlmaLinux AppStream repository
+      yum_repository:
+        name: appstream
+        description: AlmaLinux 9 - AppStream
+        baseurl: http://repo.almalinux.org/almalinux/9/AppStream/x86_64/os/
+        enabled: yes
+        gpgcheck: yes
+        gpgkey: http://repo.almalinux.org/almalinux/RPM-GPG-KEY-AlmaLinux
+
+    - name: Add AlmaLinux Extras repository
+      yum_repository:
+        name: extras
+        description: AlmaLinux 9 - Extras
+        baseurl: http://repo.almalinux.org/almalinux/9/extras/x86_64/os/
+        enabled: yes
+        gpgcheck: yes
+        gpgkey: http://repo.almalinux.org/almalinux/RPM-GPG-KEY-AlmaLinux
+
+    - name: Remove any old or untrusted repositories
+      yum_repository:
+        name: "*"
+        state: absent
+        exclude:
+          - baseos
+          - appstream
+          - extras
+          - epel
+
+    - name: Update all packages
+      yum:
+        name: "*"
+        state: latest
+
+# --- [R59] --- #
