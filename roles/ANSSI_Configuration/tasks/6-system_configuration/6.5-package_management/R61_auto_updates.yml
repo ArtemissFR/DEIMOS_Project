@@ -1,0 +1,55 @@
+# --- [R61] --- #
+
+    - name: Ensure dnf-automatic is installed
+      ansible.builtin.yum:
+        name: dnf-automatic
+        state: present
+
+    - name: Enable and start the dnf-automatic timer
+      ansible.builtin.systemd:
+        name: dnf-automatic.timer
+        enabled: yes
+        state: started
+
+    - name: Configure dnf-automatic for regular updates
+      ansible.builtin.copy:
+        dest: /etc/dnf/automatic.conf
+        content: |
+          [commands]
+          # Whether updates should be applied when they are available. Default is `False`.
+          apply_updates = yes
+
+          [emitters]
+          # Whether updates messages should be emitted to stdout. Default is `True`.
+          emit_via = stdio
+
+          [base]
+          # Whether updates should be automatically applied when they are available. Default is `False`.
+          apply_updates = yes
+          
+          # The minimum number of minutes to wait between running updates.
+          # Default is `60`.
+          random_sleep = 60
+
+          # When to download and apply updates. Default is `download`.
+          upgrade_type = default
+
+          [commands]
+          # What kind of updates to apply. Can be one of `security`, `bugfix`, `enhancement`, `newpackage`, `all`.
+          update_cmd = default
+
+          # Whether a message with information about updates should be emitted to stdout. Default is `True`.
+          emit_via = stdio
+
+          [emitters]
+          # Whether updates messages should be emitted to stdout. Default is `True`.
+          emit_via = stdio
+
+          [base]
+          # Minimum number of minutes to wait between checking for updates. Default is `60`.
+          random_sleep = 60
+
+          # Whether a message should be emitted for updates. Default is `True`.
+          emit_via = stdio
+
+# --- [R61] --- #
