@@ -56,6 +56,17 @@
         group: root
         mode: '0644'
 
+# "icc": false: Disables inter-container communication.
+# "userns-remap": "default": Enables user namespace remapping.
+# "no-new-privileges": true: Prevents containers from gaining new privileges.
+# "live-restore": true: Allows containers to continue running if the Docker daemon is restarted.
+# "userland-proxy": false: Disables userland proxy for better performance and security.
+# "disable-legacy-registry": true: Disables support for insecure legacy Docker registries.
+# "log-level": "warn": Sets the logging level to "warn" to reduce log output.
+# "experimental": false: Disables experimental features.
+# "insecure-registries": []: Does not use any insecure registries.
+# "max-concurrent-downloads": 3 and "max-concurrent-uploads": 3: Limits the number of concurrent downloads and uploads to reduce system load.
+
     - name: Restart Docker to apply changes
       systemd:
         name: docker
