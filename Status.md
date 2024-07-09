@@ -106,11 +106,11 @@
   - [R56] Éviter l'usage d'exécutables avec les droits spéciaux setuid et setgid : status = ❌
   - [R57] Éviter l'usage d'exécutables avec les droits spéciaux setuid root et setgid root : status = ❌
 ## 6.5 - Gestion des paquets
-  - [R58] N'installer que les paquets strictement nécessaires : status = ⚠️
-  - [R59] Utiliser des dépôts de paquets de confiance : status = ❌
-  - [R60] Utiliser des dépôts de paquets durcis : status = ❌
+  - [R58] N'installer que les paquets strictement nécessaires : status = ✔️
+  - [R59] Utiliser des dépôts de paquets de confiance : status = ✔️
+  - [R60] Utiliser des dépôts de paquets durcis : status = ✔️
 ## 6.6 - Veille et maintenance
-  - [R61] Effectuer des mises à jour régulières : status = ⚠️
+  - [R61] Effectuer des mises à jour régulières : status = ✔️
 
 ---
 
