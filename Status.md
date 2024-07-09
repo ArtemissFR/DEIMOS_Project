@@ -67,7 +67,7 @@
   - [R29] Restreindre les accès au dossier /boot : status = ❌
 ## 6.2 - Comptes d'accès
 ### 6.2.1 - Comptes utilisateur
-  - [R30] Désactiver les comptes utilisateur inutilisés : status = ❌
+  - [R30] Désactiver les comptes utilisateur inutilisés : status = ⚠️
   - [R31] Utiliser des mots de passe robustes : status = ⚠️
   - [R32] Éxpirer les sessions utilisateur locales : status = ❌
 ### 6.2.2 - Comptes administrateur
@@ -119,8 +119,8 @@
   - [R63] Désactiver les fonctionnalités des services non essentielles : status = ✔️
   - [R64] Configurer les privilèges des services : status = 💭
 ## 7.1 - Cloisonnement
-  - [R65] Cloisonner les services : status = ❌ | 🔜 (Docker)
-  - [R66] Durcir les composants de cloisonnement : status = ❌ | 🔜 (Docker)
+  - [R65] Cloisonner les services : status = ✔️ | 🔜 (Docker)
+  - [R66] Durcir les composants de cloisonnement : status = ✔️ | 🔜 (Docker)
 ## 7.2 - Services système
 ### 7.2.1 - Pluggable Authentication Module ou module d'authentification enfichable
   - [R67] Sécuriser les authentifications distante par PAM : status = 💭
