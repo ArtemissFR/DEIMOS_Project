@@ -1,3 +1,5 @@
+# --- [R58] --- #
+
 - name: "[Office Package] - Install libreoffice"
   ansible.builtin.dnf:
     name: libreoffice
@@ -22,3 +24,5 @@
   ansible.builtin.dnf:
     name: inkscape
     state: latest
+
+# --- [R58] --- #
