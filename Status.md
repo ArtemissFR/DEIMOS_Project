@@ -126,7 +126,7 @@
   - [R67] Sécuriser les authentifications distante par PAM : status = 💭
   - [R68] Protéger les mots de passe stockés  : status = ⚠️
 ### 7.2.2 - Name Service Switch ou service de gestion de noms
-  - [R69] Sécuriser les accès aux bases utilisateur distantes : status = ❌ | 🔜 (Config OpenSSH)
+  - [R69] Sécuriser les accès aux bases utilisateur distantes : status = ✔️ | 🔜 (Config OpenSSH)
   - [R70] Séparer les comptes système et d'administrateur de l'annuaire : status = ❌
 ### 7.2.3 - Journalisation
   - [R71] Mettre en place un système de journalisation : status = ❌ | 🔜 (Surveillance : Prometheus/ELK Stack/Kibana)
