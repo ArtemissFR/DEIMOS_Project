@@ -18,26 +18,32 @@ Ce projet a pour objectif de fournir un guide et un ensemble de scripts Ansible 
 
 ### Comment utiliser le Playbook ?
 
-1. Télécharger le dépots :
+1. Configurer SSH :
+   
+   ```bash
+   ssh-copy-id root@{ip de votre machine alma linux}
+   ```
+
+2. Télécharger le dépots :
    
    ```bash
    git clone https://github.com/ArtemissFR/DEIMOS_Project
    cd DEIMOS_Project
    ```
 
-2. Configurer l'hôte distant :
+3. Configurer l'hôte distant :
    
    ```bash
    nano hosts.ini
    ```
 
-3. Lancer le playbook :
+4. Lancer le playbook :
    
    ```bash
    ansible-playbook Launch_Playbook.yml
    ```
 
-4. Lancer le playbook (localement) :
+5. Lancer le playbook (localement) :
    
    ```bash
    ansible-playbook Launch_Playbook_Locally.yml
