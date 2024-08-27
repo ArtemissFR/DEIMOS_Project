@@ -1,1 +1,18 @@
+- include_tasks: R6_Protect_kernel_command_line.yml
+- include_tasks: R7_Enable_IOMMU.yml
+- include_tasks: R10_Disable_loading_kernel_modules.yml
+- include_tasks: R11_Kernel_yama_configuration.yml
+- include_tasks: kernel_configuration.yml
+
+
+- name: Résultat
+  debug:
+     msg: "La configuration du Kernel a été correctement effectuée !"
+  when: LANGUAGE.user_input == "french"
+
+- name: Result
+  debug:
+     msg: "The Kernel configuration has been successfully completed !"
+  when: LANGUAGE.user_input == "english"
+
 
