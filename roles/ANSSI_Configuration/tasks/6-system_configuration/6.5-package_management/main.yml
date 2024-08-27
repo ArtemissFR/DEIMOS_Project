@@ -1,4 +1,9 @@
-- include_tasks: test.yml
+- include_tasks: 6.5-package_management/R58_basic_package_list.yml
+- include_tasks: 6.5-package_management/R58_network_package_list.yml
+- include_tasks: 6.5-package_management/R58_office_package_list.yml
+- include_tasks: 6.5-package_management/R59_trusted_repo.yml
+- include_tasks: 6.5-package_management/clean_files.yml
+- include_tasks: 6.5-package_management/full_update.yml
 
 
 - name: Résultat
