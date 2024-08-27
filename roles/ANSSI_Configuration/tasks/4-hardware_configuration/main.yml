@@ -1,1 +1,14 @@
+- include_tasks: R3_UEFI_Secure_Boot.yml
+- include_tasks: R4_replace_preloaded_keys.yml
+
+
+- name: Résultat
+  debug:
+     msg: "La configuration du matériel a été correctement effectuée !"
+  when: LANGUAGE.user_input == "french"
+
+- name: Result
+  debug:
+     msg: "The hardware configuration has been successfully completed !"
+  when: LANGUAGE.user_input == "english"
 
