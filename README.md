@@ -16,34 +16,59 @@ Bienvenue dans ce projet de configuration Ansible visant à sécuriser une machi
 
 Ce projet a pour objectif de fournir un guide et un ensemble de scripts Ansible permettant d'automatiser la mise en place de configurations sécurisées sur des machines tournant sous AlmaLinux 9. En adoptant les conseils de l'ANSSI, nous visons à renforcer la sécurité de nos infrastructures tout en facilitant la gestion et la maintenance de nos systèmes.
 
-### Comment utiliser le Playbook ?
+### Comment réaliser les prérequis SSH ?
 
-1. Configurer SSH :
+1. [Alma Linux] Donner un mot de passe au compte Root :
    
    ```bash
-   ssh-copy-id root@{ip de votre machine alma linux}
+   passwd root
+   ```
+2. [Alma Linux] Générer une paire de clés SSH :
+   
+   ```bash
+   ssh-keygen
    ```
 
-2. Télécharger le dépots :
+3. [Alma Linux] Autoriser la connexion via Root :
+   
+   ```bash
+   nano /etc/ssh/sshd_config
+   ```
+   ```bash
+   Modifier : "PermitRootLogin Yes"
+   ```
+   
+4. [Ansible] Configurer SSH :
+   
+   ```bash
+   ssh-keygen
+   ```
+   ```bash
+   ssh-copy-id root@{ip de la machine alma linux}
+   ```
+
+### Comment utiliser le Playbook ?
+
+1. Télécharger le dépots :
    
    ```bash
    git clone https://github.com/ArtemissFR/DEIMOS_Project
    cd DEIMOS_Project
    ```
 
-3. Configurer l'hôte distant :
+2. Configurer l'hôte distant :
    
    ```bash
    nano hosts.ini
    ```
 
-4. Lancer le playbook :
+3. Lancer le playbook :
    
    ```bash
    ansible-playbook Launch_Playbook.yml
    ```
 
-5. Lancer le playbook (localement) :
+4. Lancer le playbook (localement) :
    
    ```bash
    ansible-playbook Launch_Playbook_Locally.yml
