@@ -21,8 +21,8 @@
 
 - name: Ensure initramfs file is protected
   command: /usr/bin/dracut -f
-  notify:
-    - Reload initramfs
+#  notify:
+#    - Reload initramfs
 
 #handlers:
 #  - name: Reload initramfs
