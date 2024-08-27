@@ -1,29 +1,29 @@
 # --- [R4] --- #
 
-    - name: Ensure efibootmgr is installed
-      ansible.builtin.yum:
-        name: efibootmgr
-        state: present
+- name: Ensure efibootmgr is installed
+  ansible.builtin.yum:
+    name: efibootmgr
+    state: present
 
-    - name: Replace preloaded keys (example command, adjust accordingly)
-      ansible.builtin.command:
-        cmd: >
-          efibootmgr --create --label "MyNewBoot" --disk /dev/sda --part 1 --loader \EFI\BOOT\BOOTX64.EFI
-        creates: /sys/firmware/efi/efivars/MyNewBoot-*
+- name: Replace preloaded keys (example command, adjust accordingly)
+  ansible.builtin.command:
+    cmd: >
+      efibootmgr --create --label "MyNewBoot" --disk /dev/sda --part 1 --loader \EFI\BOOT\BOOTX64.EFI
+    creates: /sys/firmware/efi/efivars/MyNewBoot-*
 
-    - name: Remove preloaded keys (example command, adjust accordingly)
-      ansible.builtin.command:
-        cmd: >
-          efibootmgr --delete-bootnum 0001
-        when: "0001" in ansible_facts.efibootmgr_bootorder
+- name: Remove preloaded keys (example command, adjust accordingly)
+  ansible.builtin.command:
+    cmd: efibootmgr --delete-bootnum 0001
+  when: "'0001' in ansible_facts.efibootmgr_bootorder"
 
-    - name: Verify new boot entry is created
-      ansible.builtin.command:
-        cmd: efibootmgr
-      register: efibootmgr_output
+- name: Verify new boot entry is created
+  ansible.builtin.command:
+    cmd: efibootmgr
+  register: efibootmgr_output
 
-    - name: Display efibootmgr output
-      debug:
-        var: efibootmgr_output.stdout
+- name: Display efibootmgr output
+  ansible.builtin.debug:
+    var: efibootmgr_output.stdout
+
 
 # --- [R4] --- #
