@@ -8,8 +8,6 @@
 
     - name: Update Grub
       command: grub2-mkconfig -o /boot/grub2/grub.cfg
-      notify:
-        - Reboot Server
 
     - name: Reboot Server
       reboot:
