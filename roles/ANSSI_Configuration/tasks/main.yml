@@ -7,7 +7,7 @@
 # --- [R5] -> [R27] --- #
 
 # --- [R28] -> [R61] --- #
-- include_tasks: "6-system_configuration/main.yml"
+- include_tasks: "6-system_configuration/6.5-package_management/main.yml"
 # --- [R28] -> [R61] --- #
 
 # --- [R62] -> [R80] --- #
