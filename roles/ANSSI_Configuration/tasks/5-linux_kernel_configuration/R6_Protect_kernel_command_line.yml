@@ -24,8 +24,8 @@
   notify:
     - Reload initramfs
 
-handlers:
-  - name: Reload initramfs
-    command: /usr/sbin/dracut --force
+#handlers:
+#  - name: Reload initramfs
+#    command: /usr/sbin/dracut --force
 
 # --- [R6] --- #
