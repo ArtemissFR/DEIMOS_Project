@@ -13,5 +13,6 @@
     - name: "Enable UEFI Secure Boot if not enabled"
       command: mokutil --enable-validation
       when: secure_boot_status.stdout != "SecureBoot enabled"
+      ignore_errors: yes
 
 # --- [R3] --- #
