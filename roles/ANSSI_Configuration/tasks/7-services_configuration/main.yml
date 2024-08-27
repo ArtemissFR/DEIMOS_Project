@@ -1,1 +1,16 @@
+- include_tasks: R62_disable_unnecessary_services.yml
+- include_tasks: R65-R66-R78_containerization.yml
+- include_tasks: R69_openssh_confiugration.yml
+- include_tasks: R73_Configure_auditd.yml
+
+
+- name: Résultat
+  debug:
+     msg: "La configuration des services a bien été effectuée !"
+  when: LANGUAGE.user_input == "french"
+
+- name: Result
+  debug:
+     msg: "The configuration of the services has been successfully completed !"
+  when: LANGUAGE.user_input == "english"
 
