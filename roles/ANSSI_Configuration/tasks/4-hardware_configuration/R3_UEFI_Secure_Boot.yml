@@ -1,11 +1,16 @@
 # --- [R3] --- #
 
-    - name: Ensure UEFI Secure Boot is enabled
+    - name: "Install mokutil"
+      ansible.builtin.dnf:
+        name: mokutil
+        state: latest
+
+    - name: "Ensure UEFI Secure Boot is enabled"
       command: mokutil --sb-state
       register: secure_boot_status
       ignore_errors: yes
 
-    - name: Enable UEFI Secure Boot if not enabled
+    - name: "Enable UEFI Secure Boot if not enabled"
       command: mokutil --enable-validation
       when: secure_boot_status.stdout != "SecureBoot enabled"
 
