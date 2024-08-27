@@ -18,6 +18,7 @@
     owner: root
     group: root
     mode: '0400'
+    
 
 - name: Ensure initramfs file is protected
   command: /usr/bin/dracut -f
