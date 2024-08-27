@@ -15,4 +15,14 @@
       when: secure_boot_status.stdout != "SecureBoot enabled"
       ignore_errors: yes
 
+    - name: Information
+      debug:
+         msg: "Si vous avez une erreur, cela est peut-être dû au fait que les variables EFI ne sont pas supportées sur le système."
+      when: LANGUAGE.user_input == "french"
+
+    - name: Information
+      debug:
+         msg: "If you encounter an error, it might be due to the fact that EFI variables are not supported on the system."
+      when: LANGUAGE.user_input == "english"
+
 # --- [R3] --- #
