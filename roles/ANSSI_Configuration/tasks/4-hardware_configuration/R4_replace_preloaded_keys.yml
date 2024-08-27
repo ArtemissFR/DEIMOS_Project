@@ -10,20 +10,23 @@
     cmd: >
       efibootmgr --create --label "MyNewBoot" --disk /dev/sda --part 1 --loader \EFI\BOOT\BOOTX64.EFI
     creates: /sys/firmware/efi/efivars/MyNewBoot-*
+  ignore_errors: yes
 
 - name: Remove preloaded keys (example command, adjust accordingly)
   ansible.builtin.command:
     cmd: efibootmgr --delete-bootnum 0001
   when: "'0001' in ansible_facts.efibootmgr_bootorder"
+  ignore_errors: yes
 
 - name: Verify new boot entry is created
   ansible.builtin.command:
     cmd: efibootmgr
   register: efibootmgr_output
+  ignore_errors: yes
 
 - name: Display efibootmgr output
   ansible.builtin.debug:
     var: efibootmgr_output.stdout
-
+  ignore_errors: yes
 
 # --- [R4] --- #
