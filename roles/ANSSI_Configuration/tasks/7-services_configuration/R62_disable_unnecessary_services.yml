@@ -12,5 +12,5 @@
         - ModemManager # Nécessaire seulement si tu utilises un modem pour la connectivité
         - postfix # Serveur de mail
         - rpcbind # Remote Procedure Call
-
+      ignore_errors: yes
 # --- [R62] --- #
