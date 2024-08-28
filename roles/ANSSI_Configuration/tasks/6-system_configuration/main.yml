@@ -1,0 +1,12 @@
+- include_tasks: R61_auto_updates.yml
+
+
+- name: Résultat
+  debug:
+     msg: "Tout les paquets on été installé correctement !"
+  when: LANGUAGE.user_input == "french"
+
+- name: Result
+  debug:
+     msg: "All the packages have been correctly installed !"
+  when: LANGUAGE.user_input == "english"
