@@ -1,1 +1,11 @@
+- name: Notify
+  block:
+    - name: Notification
+      debug:
+        msg: "This project is presented to you by :"
+      when: LANGUAGE.user_input == "english"
 
+    - name: Notification
+      debug:
+        msg: "Ce projet vous est présenter par : ???"
+      when: LANGUAGE.user_input == "french"
