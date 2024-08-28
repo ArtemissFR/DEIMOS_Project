@@ -1,6 +1,6 @@
 - include_tasks: R62_disable_unnecessary_services.yml
 #- include_tasks: R65-R66-R78_containerization.yml
-- include_tasks: R69_openssh_confiugration.yml
+- include_tasks: R69_openssh_configuration.yml
 - include_tasks: R73_Configure_auditd.yml
 
 
