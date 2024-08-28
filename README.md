@@ -111,5 +111,5 @@ Ce projet a pour objectif de fournir un guide et un ensemble de scripts Ansible 
 ---
 
 <p align="center">
-  <img src="https://upload.wikimedia.org/wikipedia/fr/thumb/3/31/Anssi.png/800px-Anssi.png" alt="Deimos Icon" width="700"/>
+  <img src="https://upload.wikimedia.org/wikipedia/fr/thumb/3/31/Anssi.png/800px-Anssi.png" alt="Deimos Icon" width="300"/>
 </p>
