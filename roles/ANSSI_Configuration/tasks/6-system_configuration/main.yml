@@ -3,10 +3,10 @@
 
 - name: Résultat
   debug:
-     msg: "Tout les paquets on été installé correctement !"
+     msg: "La configuration du système a été correctement effectuée !"
   when: LANGUAGE.user_input == "french"
 
 - name: Result
   debug:
-     msg: "All the packages have been correctly installed !"
+     msg: "The system configuration has been successfully completed !"
   when: LANGUAGE.user_input == "english"
