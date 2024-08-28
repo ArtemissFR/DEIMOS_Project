@@ -32,10 +32,10 @@
         line: 'PasswordAuthentication no'
         state: present
 
-    - name: Restart SSH service
-      ansible.builtin.service:
-        name: ssh
-        state: restarted
+#    - name: Restart SSH service
+#      ansible.builtin.service:
+#        name: ssh
+#        state: restarted
 
     - name: Generate a new SSH key pair
       ansible.builtin.openssh_keypair:
