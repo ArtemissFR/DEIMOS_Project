@@ -9,3 +9,15 @@
       debug:
         msg: "Ce projet vous est présenter par : ???"
       when: LANGUAGE.user_input == "french"
+
+- name: "Notify - Link"
+  block:
+    - name: Notification
+      debug:
+        msg: "This project is available at : https://github.com/ArtemissFR/DEIMOS_Project"
+      when: LANGUAGE.user_input == "english"
+
+    - name: Notification
+      debug:
+        msg: "Ce projet est disponible via : https://github.com/ArtemissFR/DEIMOS_Project"
+      when: LANGUAGE.user_input == "french"
