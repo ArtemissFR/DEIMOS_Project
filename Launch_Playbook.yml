@@ -4,5 +4,6 @@
 
   roles:
     - Language_Selection
+    - Notify
     - Gather_Facts
     - ANSSI_Configuration
