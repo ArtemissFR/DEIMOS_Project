@@ -29,9 +29,4 @@
         group: root
         mode: '0600'
 
-    - name: Restart auditd to apply the new rules
-      systemd:
-        name: auditd
-        state: restarted
-
 # --- [R73] --- #
