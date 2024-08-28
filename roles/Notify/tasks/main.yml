@@ -2,12 +2,12 @@
   block:
     - name: Notification
       debug:
-        msg: "This project is presented to you by :"
+        msg: "This project is presented to you by : Louis PROVOST / Yoan COSTA / Ouail EL GHAZAOUI / Théo BLANCHARD"
       when: LANGUAGE.user_input == "english"
 
     - name: Notification
       debug:
-        msg: "Ce projet vous est présenter par : ???"
+        msg: "Ce projet vous est présenter par : Louis PROVOST / Yoan COSTA / Ouail EL GHAZAOUI / Théo BLANCHARD"
       when: LANGUAGE.user_input == "french"
 
 - name: "Notify - Link"
