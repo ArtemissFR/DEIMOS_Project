@@ -15,7 +15,7 @@
 ## 4.1 - Support matériel
   - [R1] Choisir et configurer son matériel : status = ✔️
 ## 4.2 - BIOS/UEFI
-  - [R2] Configurer le BIOS/UEFI : status = ✔️
+  - [[R2] Configurer le BIOS/UEFI](https://github.com/ArtemissFR/DEIMOS_Project/blob/main/roles/ANSSI_Configuration/tasks/4-hardware_configuration/R3_UEFI_Secure_Boot.yml) : status = ✔️
 ## 4.3 - Démarrage sécurisé UEFI
 ### 4.3.1 - Clés préchargées
   - [R3] Activer le démarrage sécurisé UEFI : status = ✔️
