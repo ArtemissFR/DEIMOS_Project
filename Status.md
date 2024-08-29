@@ -87,7 +87,7 @@
   - [R43] Préciser les arguments dans les spécifications sudo : status = ❌
   - [R44] Éditer les fichiers de manière sécurisée avec sudo : status = ❌
 ### 6.3.2 - AppArmor
-  - [R45] Activer les profils de sécurité AppArmor : status = ❌
+  - [[R45] Activer les profils de sécurité AppArmor](https://github.com/ArtemissFR/DEIMOS_Project/blob/main/roles/ANSSI_Configuration/tasks/6-system_configuration/R45_apparmor_profil.yml) : status = ⚠️
 ### 6.3.3 - SELinux
   - [R46] Activer SELinux avec la politique targeted : status = ❌
   - [R47] Confiner les utilisateurs interactifs non privilégiés : status = ❌
