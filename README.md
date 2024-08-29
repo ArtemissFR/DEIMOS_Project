@@ -83,6 +83,7 @@ Ce projet a pour objectif de fournir un guide et un ensemble de scripts Ansible 
 | Nom du Rôle | Description |
 |-------------|-------------|
 | **Language_Selection**  | Un rôle permettant de choisir la langue utilisée pour la suite du playbook. |
+| **Notify**  | Un rôle à simple but d'information pour l'utilisateur. |
 | **Gather_Facts**  | Un rôle pour récupérer et afficher des informations sur le matériel de la machine distante. |
 | **ANSSI_Configuration**  | Un rôle pour configurer des paramètres afin de correspondre aux recommandations de l'ANSSI. |
 
@@ -92,6 +93,12 @@ Ce projet a pour objectif de fournir un guide et un ensemble de scripts Ansible 
 | Tâches | 
 |--------|
 | - Proposition d'un choix de la langue |
+
+#### Rôle "Notify" :
+| Tâches | 
+|--------|
+| - Affichage du noms des membres créateurs du Playbook |
+| - Affichage du lien vers le Projet |
 
 #### Rôle "Gather_Facts" :
 | Tâches | 
