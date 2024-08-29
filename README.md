@@ -83,7 +83,7 @@ Ce projet a pour objectif de fournir un guide et un ensemble de scripts Ansible 
 | Nom du Rôle | Description |
 |-------------|-------------|
 | **Language_Selection**  | Un rôle permettant de choisir la langue utilisée pour la suite du playbook. |
-| **Notify**  | Un rôle à simple but d'information pour l'utilisateur. |
+| [**Notify**](https://github.com/ArtemissFR/DEIMOS_Project/blob/main/roles/Notify/tasks/main.yml)  | Un rôle à simple but d'information pour l'utilisateur. |
 | **Gather_Facts**  | Un rôle pour récupérer et afficher des informations sur le matériel de la machine distante. |
 | **ANSSI_Configuration**  | Un rôle pour configurer des paramètres afin de correspondre aux recommandations de l'ANSSI. |
 
