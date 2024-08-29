@@ -1,0 +1,12 @@
+# --- [R29] --- #
+
+    - name: Restreindre les permissions du répertoire /boot
+      ansible.builtin.file:
+        path: /boot
+        mode: '0700'
+        owner: root
+        group: root
+      state: directory
+      recurse: yes
+      
+# --- [R29] --- #
