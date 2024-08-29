@@ -128,6 +128,7 @@ Ce projet a pour objectif de fournir un guide et un ensemble de scripts Ansible 
 | ~ | - Suppression des paquets inutiles |
 | ~ | - Activation de l'automatisation des mises a jour |
 | *Services Configuration* | - Désactivation des services inutiles |
+| ~ | - Mise en place de la conteneurisation (not working) |
 | ~ | - Configuration des paramètre SSH |
 | ~ | - Configuration Auditd |
 
