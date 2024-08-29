@@ -133,6 +133,7 @@ Ce projet a pour objectif de fournir un guide et un ensemble de scripts Ansible 
 | ~ | - Configuration Auditd |
 
 ---
+[Document des recommandations de l'ANSSI](https://github.com/ArtemissFR/DEIMOS_Project/Documentation/ANSSI/fr_np_linx_configuration-v2.0.pdf)
 
 <p align="center">
   <img src="https://upload.wikimedia.org/wikipedia/fr/thumb/3/31/Anssi.png/800px-Anssi.png" alt="Deimos Icon" width="300"/>
