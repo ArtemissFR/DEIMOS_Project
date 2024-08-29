@@ -1,0 +1,22 @@
+# --- [R45] --- #
+
+    - name: Install the necessary dependencies
+      ansible.builtin.yum:
+        name: 
+          - epel-release
+          - apparmor
+          - apparmor-utils
+        state: present
+
+    - name: Enable the AppArmor service at startup
+      ansible.builtin.systemd:
+        name: apparmor
+        enabled: yes
+        state: started
+
+    - name: Load all AppArmor profiles
+      ansible.builtin.command: "apparmor_parser -r /etc/apparmor.d/*"
+      args:
+        warn: false
+      
+# --- [R45] --- #
