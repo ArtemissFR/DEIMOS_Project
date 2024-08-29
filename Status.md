@@ -64,7 +64,7 @@
 # 6 - Configuration système
 ## 6.1 - Partitionnement
   - [R28] Partitionnement type : status = ❌
-  - [R29] Restreindre les accès au dossier /boot : status = ❌
+  - [[R29] Restreindre les accès au dossier /boot](https://github.com/ArtemissFR/DEIMOS_Project/blob/main/roles/ANSSI_Configuration/tasks/6-system_configuration/R29_boot_access.yml) : status = ⚠️
 ## 6.2 - Comptes d'accès
 ### 6.2.1 - Comptes utilisateur
   - [R30] Désactiver les comptes utilisateur inutilisés : status = ⚠️
