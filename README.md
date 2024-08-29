@@ -113,7 +113,8 @@ Ce projet a pour objectif de fournir un guide et un ensemble de scripts Ansible 
 #### Rôle "ANSSI_Configuration" :
 | Sous-Catégories | Tâches | 
 |-----------------|--------|
-| - ???  | - ???  |
+| Hardware Configuration  | - UEFI Secure Boot  |
+| ~ | - Replace preloaded keys  |
 
 ---
 
