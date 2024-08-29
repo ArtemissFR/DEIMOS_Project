@@ -1,0 +1,10 @@
+# --- [R49] --- #
+
+    - name: Ensure SELinux policy debugging tools are uninstalled
+      package:
+        name:
+          - setools-console
+          - setroubleshoot
+        state: absent
+      
+# --- [R49] --- #
