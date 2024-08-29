@@ -96,7 +96,7 @@
 ## 6.4 - Fichiers et répertoires
 ### 6.4.1 - Fichiers et répertoires sensibles
   - [[R50] Restreindre les droits d'accès aux fichiers et aux répertoires sensibles](https://github.com/ArtemissFR/DEIMOS_Project/blob/main/roles/ANSSI_Configuration/tasks/6-system_configuration/R50_Restrict_access.yml) : status = ⚠️
-  - [R51] Changer les secrets et droits d'accès dès l'installation : status = ❌
+  - [[R51] Changer les secrets et droits d'accès dès l'installation](https://github.com/ArtemissFR/DEIMOS_Project/blob/main/roles/ANSSI_Configuration/tasks/8-bonus/password_generation.yml) : status = ⚠️
 ### 6.4.2 - Fichiers IPC nommés, sockets ou pipes
   - [R52] Restreindre les accès aux sockets et aux pipes nommées : status = ❌
 ### 6.4.3 - Droits d'accès
