@@ -1,5 +1,10 @@
 - include_tasks: R61_auto_updates.yml
 
+#- include_tasks: R29_boot_access.yml
+#- include_tasks: R45_apparmor_profil.yml
+#- include_tasks: R46_SELinux_Targeted.yml
+#- include_tasks: R49_SELinux_debugging_tools.yml
+#- include_tasks: R50_Restrict_access.yml
 
 - name: Résultat
   debug:
