@@ -111,9 +111,9 @@ Ce projet a pour objectif de fournir un guide et un ensemble de scripts Ansible 
 | - Récupération et affichage des informations sur le réseau |
 
 #### Rôle "ANSSI_Configuration" :
-| Tâches | 
-|--------|
-| - ???  |
+| Sous-Catégories | Tâches | 
+|-----------------|--------|
+| - ???  | - ???  |
 
 ---
 
