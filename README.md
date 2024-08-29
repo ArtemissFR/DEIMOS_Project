@@ -113,8 +113,23 @@ Ce projet a pour objectif de fournir un guide et un ensemble de scripts Ansible 
 #### Rôle "ANSSI_Configuration" :
 | Sous-Catégories | Tâches | 
 |-----------------|--------|
-| Hardware Configuration  | - UEFI Secure Boot  |
-| ~ | - Replace preloaded keys  |
+| *Hardware Configuration* | - Activation du Boot sécurisé UEFI |
+| ~ | - Remplacement des clés préchargées |
+| *Linux Kernel Configuration* | - Protection du système de commande Kernel |
+| ~ | - Activation IOMMU |
+| ~ | - Désactivation des modules de chargement Kernel |
+| ~ | - Configuration du Kernel Yama |
+| ~ | - Configuration du Kernel |
+| *Syteme Configuration* | - Installation des packages de base |
+| ~ | - Installation des packages de Réseaux |
+| ~ | - Installation des packages de Bureautique |
+| ~ | - Ajout des dépots de confiance |
+| ~ | - Mise a jour de tout les paquets |
+| ~ | - Suppression des paquets inutiles |
+| ~ | - Activation de l'automatisation des mises a jour |
+| *Services Configuration* | - Désactivation des services inutiles |
+| ~ | - Configuration des paramètre SSH |
+| ~ | - Configuration Auditd |
 
 ---
 
