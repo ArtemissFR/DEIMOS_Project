@@ -141,4 +141,4 @@
 ## 7.3 Services réseau
   - [[R78] Cloisonner les services réseau](https://github.com/ArtemissFR/DEIMOS_Project/blob/main/roles/ANSSI_Configuration/tasks/7-services_configuration/R65-R66-R78_containerization.yml) : status = ✔️ | 🔜 (Docker)
   - [R79] Durcir et surveiller les services exposés : status = ❌ | 🔜 (Configuration + MAJ auto | Surveillance : Prometheus/ELK Stack/Kibana)
-  - [[R80] Réduire la surface d'attaque des services réseau](https://github.com/ArtemissFR/DEIMOS_Project/blob/main/roles/ANSSI_Configuration/tasks/7-services_configuration/R80_reduce_network_attack.yml) : status = ⚠️ | 🔜 (Pare-feu : ufw | Protection :  fail2ban)
+  - [[R80] Réduire la surface d'attaque des services réseau](https://github.com/ArtemissFR/DEIMOS_Project/blob/main/roles/ANSSI_Configuration/tasks/7-services_configuration/R80_reduce_network_attack.yml) : status = ⚠️ | 🔜 (Pare-feu : **ufw** | Protection :  fail2ban)
