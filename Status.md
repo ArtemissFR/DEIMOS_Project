@@ -89,13 +89,13 @@
 ### 6.3.2 - AppArmor
   - [[R45] Activer les profils de sécurité AppArmor](https://github.com/ArtemissFR/DEIMOS_Project/blob/main/roles/ANSSI_Configuration/tasks/6-system_configuration/R45_apparmor_profil.yml) : status = ⚠️
 ### 6.3.3 - SELinux
-  - [R46] Activer SELinux avec la politique targeted : status = ❌
+  - [[R46] Activer SELinux avec la politique targeted](https://github.com/ArtemissFR/DEIMOS_Project/blob/main/roles/ANSSI_Configuration/tasks/6-system_configuration/R46_SELinux_Targeted.yml) : status = ⚠️
   - [R47] Confiner les utilisateurs interactifs non privilégiés : status = ❌
   - [R48] Paramétrer les variables SELinux : status = ❌
-  - [R49] Désinstaller les outils de débogage de politique SELinux : status = ❌
+  - [[R49] Désinstaller les outils de débogage de politique SELinux](https://github.com/ArtemissFR/DEIMOS_Project/blob/main/roles/ANSSI_Configuration/tasks/6-system_configuration/R49_SELinux_debugging_tools.yml) : status = ⚠️
 ## 6.4 - Fichiers et répertoires
 ### 6.4.1 - Fichiers et répertoires sensibles
-  - [R50] Restreindre les droits d'accès aux fichiers et aux répertoires sensibles : status = ❌
+  - [[R50] Restreindre les droits d'accès aux fichiers et aux répertoires sensibles](https://github.com/ArtemissFR/DEIMOS_Project/blob/main/roles/ANSSI_Configuration/tasks/6-system_configuration/R50_Restrict_access.yml) : status = ⚠️
   - [R51] Changer les secrets et droits d'accès dès l'installation : status = ❌
 ### 6.4.2 - Fichiers IPC nommés, sockets ou pipes
   - [R52] Restreindre les accès aux sockets et aux pipes nommées : status = ❌
