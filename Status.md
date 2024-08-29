@@ -68,7 +68,7 @@
 ## 6.2 - Comptes d'accès
 ### 6.2.1 - Comptes utilisateur
   - [R30] Désactiver les comptes utilisateur inutilisés : status = ⚠️
-  - [R31] Utiliser des mots de passe robustes : status = ⚠️
+  - [[R31] Utiliser des mots de passe robustes](https://github.com/ArtemissFR/DEIMOS_Project/blob/main/roles/ANSSI_Configuration/tasks/8-bonus/password_generation.yml) : status = ⚠️
   - [R32] Éxpirer les sessions utilisateur locales : status = ❌
 ### 6.2.2 - Comptes administrateur
   - [R33] Assurer l'imputabilité des actions d'administration : status = ❌
