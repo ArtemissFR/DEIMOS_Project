@@ -124,7 +124,7 @@
 ## 7.2 - Services système
 ### 7.2.1 - Pluggable Authentication Module ou module d'authentification enfichable
   - [R67] Sécuriser les authentifications distante par PAM : status = 💭
-  - [R68] Protéger les mots de passe stockés  : status = ⚠️
+  - [[R68] Protéger les mots de passe stockés](https://github.com/ArtemissFR/DEIMOS_Project/blob/main/roles/ANSSI_Configuration/tasks/8-bonus/password_generation.yml)  : status = ⚠️
 ### 7.2.2 - Name Service Switch ou service de gestion de noms
   - [[R69] Sécuriser les accès aux bases utilisateur distantes](https://github.com/ArtemissFR/DEIMOS_Project/blob/main/roles/ANSSI_Configuration/tasks/7-services_configuration/R69_openssh_configuration.yml) : status = ✔️ | 🔜 (Config OpenSSH)
   - [R70] Séparer les comptes système et d'administrateur de l'annuaire : status = ❌
