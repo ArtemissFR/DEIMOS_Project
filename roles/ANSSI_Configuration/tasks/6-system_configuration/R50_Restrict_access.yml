@@ -1,0 +1,29 @@
+# --- [R50] --- #
+
+    - name: Set permissions on sensitive files
+      file:
+        path: "{{ item.path }}"
+        state: file
+        mode: "{{ item.mode }}"
+        owner: "{{ item.owner }}"
+        group: "{{ item.group }}"
+      loop:
+        - { path: "/etc/shadow", mode: '0600', owner: 'root', group: 'root' }
+        - { path: "/etc/gshadow", mode: '0600', owner: 'root', group: 'root' }
+        - { path: "/root/.bash_history", mode: '0600', owner: 'root', group: 'root' }
+        - { path: "/etc/passwd", mode: '0644', owner: 'root', group: 'root' }
+      become: yes
+
+    - name: Set permissions on sensitive directories
+      file:
+        path: "{{ item.path }}"
+        state: directory
+        mode: "{{ item.mode }}"
+        owner: "{{ item.owner }}"
+        group: "{{ item.group }}"
+      loop:
+        - { path: "/root", mode: '0700', owner: 'root', group: 'root' }
+        - { path: "/etc/ssl/private", mode: '0700', owner: 'root', group: 'root' }
+      become: yes
+      
+# --- [R50] --- #
