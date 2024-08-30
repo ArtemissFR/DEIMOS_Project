@@ -10,20 +10,17 @@
 
     - name: Set SELinux policy to targeted
       command: setsebool -P targeted 1
-      notify:
-        - Reboot if SELinux policy was changed
+
+    - name: Reboot if SELinux policy was changed
+      reboot:
+        msg: "Rebooting to apply SELinux policy changes"
+        pre_reboot_delay: 5
+        post_reboot_delay: 30
+        reboot_timeout: 600
 
     - name: Ensure SELinux is enabled and set to enforcing
       selinux:
         policy: targeted
         state: enforcing
-
-    handlers:
-      - name: Reboot if SELinux policy was changed
-        reboot:
-          msg: "Rebooting to apply SELinux policy changes"
-          pre_reboot_delay: 5
-          post_reboot_delay: 30
-          reboot_timeout: 600
       
 # --- [R46] --- #
