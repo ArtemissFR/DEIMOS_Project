@@ -9,5 +9,11 @@
         file_type: directory
         mode: "u+w,g+w,o+w"
       register: world_writable_dirs
+
+    - name: Set sticky bit on world-writable directories
+      file:
+        path: "{{ item.path }}"
+        mode: "1777"
+      loop: "{{ world_writable_dirs.files }}"
       
 # --- [R54] --- #
