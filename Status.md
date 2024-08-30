@@ -73,7 +73,7 @@
 ### 6.2.2 - Comptes administrateur
   - [R33] Assurer l'imputabilité des actions d'administration : status = ❌
 ### 6.2.3 - Comptes de service
-  - [R34] Désactiver les comptes de service : status = ❌
+  - [[R34] Désactiver les comptes de service](https://github.com/ArtemissFR/DEIMOS_Project/blob/main/roles/ANSSI_Configuration/tasks/6-system_configuration/R34_service_accounts.yml) : status = ⚠️
   - [R35] Utiliser des comptes de service uniques et exclusifs : status = ❌
 ## 6.3 - Contrôle d'accès
 ### 6.3.1 - Modèle traditionnel Unix
@@ -90,7 +90,7 @@
   - [[R45] Activer les profils de sécurité AppArmor](https://github.com/ArtemissFR/DEIMOS_Project/blob/main/roles/ANSSI_Configuration/tasks/6-system_configuration/R45_apparmor_profil.yml) : status = ⚠️
 ### 6.3.3 - SELinux
   - [[R46] Activer SELinux avec la politique targeted](https://github.com/ArtemissFR/DEIMOS_Project/blob/main/roles/ANSSI_Configuration/tasks/6-system_configuration/R46_SELinux_Targeted.yml) : status = ⚠️
-  - [R47] Confiner les utilisateurs interactifs non privilégiés : status = ❌
+  - [[R47] Confiner les utilisateurs interactifs non privilégiés](https://github.com/ArtemissFR/DEIMOS_Project/blob/main/roles/ANSSI_Configuration/tasks/6-system_configuration/R47_access_restrictions_non-privileged_users.yml) : status = ⚠️
   - [R48] Paramétrer les variables SELinux : status = ❌
   - [[R49] Désinstaller les outils de débogage de politique SELinux](https://github.com/ArtemissFR/DEIMOS_Project/blob/main/roles/ANSSI_Configuration/tasks/6-system_configuration/R49_SELinux_debugging_tools.yml) : status = ⚠️
 ## 6.4 - Fichiers et répertoires
