@@ -3,11 +3,11 @@
 # --- [R1] -> [R4] --- #
 
 # --- [R5] -> [R27] --- #
-#- include_tasks: "5-linux_kernel_configuration/main.yml"
+- include_tasks: "5-linux_kernel_configuration/main.yml"
 # --- [R5] -> [R27] --- #
 
 # --- [R28] -> [R61] --- #
-#- include_tasks: "6-system_configuration/6.5-package_management/main.yml"
+- include_tasks: "6-system_configuration/6.5-package_management/main.yml"
 - include_tasks: "6-system_configuration/main.yml"
 # --- [R28] -> [R61] --- #
 
