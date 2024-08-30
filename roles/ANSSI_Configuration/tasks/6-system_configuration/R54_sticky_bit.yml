@@ -1,19 +1,17 @@
 # --- [R54] --- #
 
-- name: Set sticky bit on world-writable directories
-  find:
-    paths: /
-    recurse: yes
-    file_type: directory
-    mode: "1777"
-  register: writable_dirs
+- name: Find world-writable directories
+  command: >
+    find / -type d -perm -0002 -exec ls -ld {} +
+  register: find_output
+  changed_when: false
   tags: R54
 
-- name: Apply sticky bit to directories
-  file:
-    path: "{{ item.path }}"
-    mode: "1777"
-  loop: "{{ writable_dirs.files }}"
+- name: Set sticky bit on world-writable directories
+  command: >
+    chmod +t {{ item }}
+  loop: "{{ find_output.stdout_lines }}"
+  when: find_output.stdout_lines | length > 0
   tags: R54
       
 # --- [R54] --- #
