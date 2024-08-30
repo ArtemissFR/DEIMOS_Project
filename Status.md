@@ -77,13 +77,13 @@
   - [R35] Utiliser des comptes de service uniques et exclusifs : status = ❌
 ## 6.3 - Contrôle d'accès
 ### 6.3.1 - Modèle traditionnel Unix
-  - [R36] Modifier la valeur par défaut de UMASK : status = ❌
-  - [R37] Utiliser des fonctionnalités de contrôle d'accès obligatoire MAC : status = ❌
+  - [[R36] Modifier la valeur par défaut de UMASK](https://github.com/ArtemissFR/DEIMOS_Project/blob/main/roles/ANSSI_Configuration/tasks/6-system_configuration/R36_update_MASK.yml) : status = ⚠️
+  - [[R37] Utiliser des fonctionnalités de contrôle d'accès obligatoire MAC](https://github.com/ArtemissFR/DEIMOS_Project/blob/main/roles/ANSSI_Configuration/tasks/6-system_configuration/R37_MAC_access_control.yml) : status = ⚠️
   - [R38] Créer un groupe dédié à l'usage de sudo : status = ❌
   - [R39] Modifier les directives de configuration sudo : status = ❌
   - [R40] Utiliser des utilisateurs cibles non-privilégiés pour les commandes sudo : status = ❌
-  - [R41] Limiter l'utilisation de commandes nécessitant la directive EXEC : status = ❌
-  - [R42] Bannir les négations dans les spécifications sudo : status = ❌
+  - [[R41] Limiter l'utilisation de commandes nécessitant la directive EXEC](https://github.com/ArtemissFR/DEIMOS_Project/blob/main/roles/ANSSI_Configuration/tasks/6-system_configuration/R41_restriction_EXEC.yml) : status = ⚠️
+  - [[R42] Bannir les négations dans les spécifications sudo](https://github.com/ArtemissFR/DEIMOS_Project/blob/main/roles/ANSSI_Configuration/tasks/6-system_configuration/R42_remove_negations.yml) : status = ⚠️
   - [R43] Préciser les arguments dans les spécifications sudo : status = ❌
   - [R44] Éditer les fichiers de manière sécurisée avec sudo : status = ❌
 ### 6.3.2 - AppArmor
