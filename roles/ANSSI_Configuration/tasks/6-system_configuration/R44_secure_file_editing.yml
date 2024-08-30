@@ -1,0 +1,22 @@
+# --- [R44] --- #
+
+    - name: Enable secure file editing with sudo using visudo
+      copy:
+        dest: /etc/sudoers.d/secure_edit_sudo
+        content: |
+          # Allow secure editing of sudoers file with visudo only
+          %sudo_users ALL=(ALL) NOPASSWD: /usr/sbin/visudo
+
+          # Prevent usage of other editors like vi or nano
+          %sudo_users ALL=(!/usr/bin/vi, !/usr/bin/nano)
+      tags: R44
+
+    - name: Ensure the secure-edit sudoers file has the correct permissions
+      file:
+        path: /etc/sudoers.d/secure_edit_sudo
+        owner: root
+        group: root
+        mode: '0440'
+      tags: R44
+
+# --- [R44] --- #
