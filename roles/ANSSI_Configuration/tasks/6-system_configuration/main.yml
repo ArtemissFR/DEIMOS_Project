@@ -17,7 +17,7 @@
 - include_tasks: R49_SELinux_debugging_tools.yml
 - include_tasks: R50_Restrict_access.yml
 #- include_tasks: R53_files_directories_without_valid_user.yml
-#- include_tasks: R54_sticky_bit.yml
+- include_tasks: R54_sticky_bit.yml
 - include_tasks: R55_separate_temporary_directories.yml
 - include_tasks: R56_executables_setuid_setgid.yml
 - include_tasks: R57_setuid_setgid_permissions.yml
