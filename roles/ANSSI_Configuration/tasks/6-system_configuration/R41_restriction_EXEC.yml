@@ -7,10 +7,5 @@
         regexp: '^Defaults\s+!exec'
         line: 'Defaults !exec'
         #validate: 'visudo -cf %s'
-
-    - name: Restart sudo service if needed
-      service:
-        name: sudo
-        state: restarted
       
 # --- [R41] --- #
