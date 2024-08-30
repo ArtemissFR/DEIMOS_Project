@@ -1,0 +1,26 @@
+# --- [R39] --- #
+
+    - name: Modify sudoers file to configure sudo directives
+      copy:
+        dest: /etc/sudoers.d/custom_sudo
+        content: |
+          # Allow members of sudo_users to use sudo
+          %sudo_users ALL=(ALL) ALL
+
+          # Log all sudo commands
+          Defaults logfile="/var/log/sudo.log"
+
+          # Disable sudo from running as root, use a specific unprivileged user instead
+          Defaults targetpw
+          ALL ALL=(unprivileged_user) ALL
+      tags: R39
+
+    - name: Ensure the custom sudoers file has the correct permissions
+      file:
+        path: /etc/sudoers.d/custom_sudo
+        owner: root
+        group: root
+        mode: '0440'
+      tags: R39
+      
+# --- [R39] --- #
