@@ -5,7 +5,7 @@
     paths: /
     recurse: yes
     file_type: directory
-    mode: "0222"
+    mode: "1777"
   register: writable_dirs
   tags: R54
 
