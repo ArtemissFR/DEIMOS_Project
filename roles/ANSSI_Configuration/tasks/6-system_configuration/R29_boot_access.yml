@@ -1,6 +1,6 @@
 # --- [R29] --- #
 
-    - name: Restrict the permissions of the /boot directory
+    - name: "Restrict the permissions of the /boot directory"
       ansible.builtin.file:
         path: /boot
         mode: '0700'
