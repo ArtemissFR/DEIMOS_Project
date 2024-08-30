@@ -16,10 +16,9 @@
         line: 'UMASK 027'
         state: present
         backup: yes
-      notify: Reload shell configuration
 
-    - handlers:
-          - name: Reload shell configuration
-            command: source /etc/bashrc
+
+    - name: Reload shell configuration
+      command: source /etc/bashrc
       
 # --- [R36] --- #
