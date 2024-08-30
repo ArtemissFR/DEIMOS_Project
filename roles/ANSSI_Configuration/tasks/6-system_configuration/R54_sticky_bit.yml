@@ -1,19 +1,19 @@
 # --- [R54] --- #
 
-    - name: Ensure sticky bit is set on world-writable directories
+    - name: Set sticky bit on world-writable directories
       find:
-        paths:
-          - /tmp
-          - /var/tmp
+        paths: /
         recurse: yes
         file_type: directory
-        mode: "u+w,g+w,o+w"
-      register: world_writable_dirs
+        mode: "0222"
+      register: writable_dirs
+      tags: R54
 
-    - name: Set sticky bit on world-writable directories
+    - name: Apply sticky bit to directories
       file:
         path: "{{ item.path }}"
         mode: "1777"
-      loop: "{{ world_writable_dirs.files }}"
+      with_items: "{{ writable_dirs.files }}"
+      tags: R54
       
 # --- [R54] --- #
