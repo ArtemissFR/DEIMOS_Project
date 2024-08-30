@@ -1,0 +1,12 @@
+# --- [R42] --- #
+
+    - name: Remove negations from sudoers file
+      lineinfile:
+        path: /etc/sudoers
+        state: present
+        regexp: '^#?\s*!'
+        line: ''
+        backrefs: yes
+      validate: visudo -cf %s
+      
+# --- [R42] --- #
