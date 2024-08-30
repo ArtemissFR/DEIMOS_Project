@@ -13,7 +13,7 @@
       # Utilisation de `setenforce` pour appliquer le mode enforcing.
       # `setsebool` est utilisé pour changer les options de booléens de SELinux, pas le mode policy.
 
-    - name: Reboot if SELinux policy was changed
+    - name: Reboot Server
       reboot:
         msg: "Rebooting to apply SELinux policy changes"
         pre_reboot_delay: 5
