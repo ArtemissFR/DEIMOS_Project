@@ -1,0 +1,15 @@
+# --- [R40] --- #
+
+    - name: Create a non-privileged user for sudo commands
+      user:
+        name: unprivileged_user
+        shell: /sbin/nologin
+      tags: R40
+
+    - name: Ensure unprivileged_user cannot login
+      user:
+        name: unprivileged_user
+        shell: /sbin/nologin
+      tags: R40
+      
+# --- [R40] --- #
