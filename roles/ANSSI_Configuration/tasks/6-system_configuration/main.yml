@@ -2,7 +2,7 @@
 
 - include_tasks: R29_boot_access.yml
 - include_tasks: R34_service_accounts.yml
-- include_tasks: R36_update_MASK.yml
+#- include_tasks: R36_update_MASK.yml
 - include_tasks: R37_MAC_access_control.yml
 - include_tasks: R38_dedicated_sudo_group.yml
 - include_tasks: R39_sudoers_file_permissions.yml
