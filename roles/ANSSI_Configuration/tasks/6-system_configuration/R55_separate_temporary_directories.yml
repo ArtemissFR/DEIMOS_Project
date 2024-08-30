@@ -1,12 +1,9 @@
 # --- [R55] --- #
 
     - name: Ensure users have separate temporary directories
-      file:
-        path: "/tmp/{{ item }}"
-        state: directory
-        mode: "0700"
-        owner: "{{ item }}"
-        group: "{{ item }}"
-      loop: "{{ lookup('ansible.builtin.getent', 'passwd').split(':')[0] }}"
+      lineinfile:
+        path: /etc/security/limits.conf
+        line: "* hard maxlogins 1"
+      tags: R55
       
 # --- [R55] --- #
