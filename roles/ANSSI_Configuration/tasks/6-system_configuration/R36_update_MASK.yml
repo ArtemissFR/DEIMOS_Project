@@ -7,7 +7,6 @@
         line: 'UMASK 027'
         state: present
         backup: yes
-      notify: Reload shell configuration
 
     - name: Ensure UMASK is set to 027 in /etc/profile
       lineinfile:
