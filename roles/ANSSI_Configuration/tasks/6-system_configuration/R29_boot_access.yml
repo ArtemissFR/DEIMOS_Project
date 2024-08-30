@@ -6,7 +6,6 @@
         mode: '0700'
         owner: root
         group: root
-      state: directory
-      recurse: yes
+        state: directory
       
 # --- [R29] --- #
