@@ -1,0 +1,19 @@
+# --- [R41] --- #
+
+    - name: Add restriction for EXEC commands in sudoers
+      lineinfile:
+        path: /etc/sudoers
+        state: present
+        regexp: '^Defaults\s+!exec'
+        line: 'Defaults !exec'
+        validate: 'visudo -cf %s'
+      notify:
+        - Restart sudo service if needed
+
+    handlers:
+      - name: Restart sudo service if needed
+        service:
+          name: sudo
+          state: restarted
+      
+# --- [R41] --- #
