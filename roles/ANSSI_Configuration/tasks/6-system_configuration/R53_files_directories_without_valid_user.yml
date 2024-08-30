@@ -1,14 +1,16 @@
 # --- [R53] --- #
 
-    - name: Find and report files or directories without a valid user or group
+    - name: Find files without valid user or group
       find:
         paths: /
-        ignore_errors: yes
-        file_type: any
-        uid: -1
-        gid: -1
-      register: unknown_ownership_files
-      changed_when: false
-      ignore_errors: yes
+        no_user: yes
+        no_group: yes
+      register: orphaned_files
+      tags: R53
+
+    - name: Report orphaned files
+      debug:
+        var: orphaned_files
+      tags: R53
       
 # --- [R53] --- #
