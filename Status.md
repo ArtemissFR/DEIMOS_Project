@@ -77,7 +77,7 @@
   - [R35] Utiliser des comptes de service uniques et exclusifs : status = ❌
 ## 6.3 - Contrôle d'accès
 ### 6.3.1 - Modèle traditionnel Unix
-  - [[R36] Modifier la valeur par défaut de UMASK](https://github.com/ArtemissFR/DEIMOS_Project/blob/main/roles/ANSSI_Configuration/tasks/6-system_configuration/R36_update_MASK.yml) : status = ⚠️
+  - [[R36] Modifier la valeur par défaut de UMASK](https://github.com/ArtemissFR/DEIMOS_Project/blob/main/roles/ANSSI_Configuration/tasks/6-system_configuration/R36_update_MASK.yml) : status = ✔️
   - [[R37] Utiliser des fonctionnalités de contrôle d'accès obligatoire MAC](https://github.com/ArtemissFR/DEIMOS_Project/blob/main/roles/ANSSI_Configuration/tasks/6-system_configuration/R37_MAC_access_control.yml) : status = ✔️
   - [[R38] Créer un groupe dédié à l'usage de sudo](https://github.com/ArtemissFR/DEIMOS_Project/blob/main/roles/ANSSI_Configuration/tasks/6-system_configuration/R38_dedicated_sudo_group.yml) : status = ✔️
   - [[R39] Modifier les directives de configuration sudo](https://github.com/ArtemissFR/DEIMOS_Project/blob/main/roles/ANSSI_Configuration/tasks/6-system_configuration/R39_sudoers_file_permissions.yml) : status = ✔️
