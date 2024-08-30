@@ -135,7 +135,7 @@ Ce projet a pour objectif de fournir un guide et un ensemble de scripts Ansible 
 #### Rôle "ANSSI_Configuration" :
 | Catégories | Script | Tâches | 
 |------------|--------|--------|
-| *Hardware Configuration* |  |  |
+
 | **Hardware Configuration** | *"R3_UEFI_Secure_Boot.yml"* | Ce script Yaml installe d'abord le paquet mokutil sur un système. Ensuite, il vérifie si le démarrage sécurisé UEFI est activé. Si ce n'est pas le cas, il tente d'activer la validation pour le démarrage sécurisé UEFI. |
 
 ---
