@@ -1,5 +1,10 @@
 # --- [R47] --- #
 
+    - name: Create the restricted group
+      ansible.builtin.group:
+        name: restricted
+        state: present
+
     - name: Configure PAM to restrict shell access for non-privileged users
       ansible.builtin.lineinfile:
         path: /etc/security/access.conf
