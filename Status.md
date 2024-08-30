@@ -64,7 +64,7 @@
 # 6 - Configuration système
 ## 6.1 - Partitionnement
   - [R28] Partitionnement type : status = ❌
-  - [[R29] Restreindre les accès au dossier /boot](https://github.com/ArtemissFR/DEIMOS_Project/blob/main/roles/ANSSI_Configuration/tasks/6-system_configuration/R29_boot_access.yml) : status = ⚠️
+  - [[R29] Restreindre les accès au dossier /boot](https://github.com/ArtemissFR/DEIMOS_Project/blob/main/roles/ANSSI_Configuration/tasks/6-system_configuration/R29_boot_access.yml) : status = ✔️
 ## 6.2 - Comptes d'accès
 ### 6.2.1 - Comptes utilisateur
   - [R30] Désactiver les comptes utilisateur inutilisés : status = ⚠️
@@ -73,38 +73,38 @@
 ### 6.2.2 - Comptes administrateur
   - [R33] Assurer l'imputabilité des actions d'administration : status = ❌
 ### 6.2.3 - Comptes de service
-  - [[R34] Désactiver les comptes de service](https://github.com/ArtemissFR/DEIMOS_Project/blob/main/roles/ANSSI_Configuration/tasks/6-system_configuration/R34_service_accounts.yml) : status = ⚠️
+  - [[R34] Désactiver les comptes de service](https://github.com/ArtemissFR/DEIMOS_Project/blob/main/roles/ANSSI_Configuration/tasks/6-system_configuration/R34_service_accounts.yml) : status = ✔️
   - [R35] Utiliser des comptes de service uniques et exclusifs : status = ❌
 ## 6.3 - Contrôle d'accès
 ### 6.3.1 - Modèle traditionnel Unix
   - [[R36] Modifier la valeur par défaut de UMASK](https://github.com/ArtemissFR/DEIMOS_Project/blob/main/roles/ANSSI_Configuration/tasks/6-system_configuration/R36_update_MASK.yml) : status = ⚠️
-  - [[R37] Utiliser des fonctionnalités de contrôle d'accès obligatoire MAC](https://github.com/ArtemissFR/DEIMOS_Project/blob/main/roles/ANSSI_Configuration/tasks/6-system_configuration/R37_MAC_access_control.yml) : status = ⚠️
-  - [[R38] Créer un groupe dédié à l'usage de sudo](https://github.com/ArtemissFR/DEIMOS_Project/blob/main/roles/ANSSI_Configuration/tasks/6-system_configuration/R38_dedicated_sudo_group.yml) : status = ⚠️
-  - [[R39] Modifier les directives de configuration sudo](https://github.com/ArtemissFR/DEIMOS_Project/blob/main/roles/ANSSI_Configuration/tasks/6-system_configuration/R39_sudoers_file_permissions.yml) : status = ⚠️
-  - [[R40] Utiliser des utilisateurs cibles non-privilégiés pour les commandes sudo](https://github.com/ArtemissFR/DEIMOS_Project/blob/main/roles/ANSSI_Configuration/tasks/6-system_configuration/R40_unprivileged_user.yml) : status = ⚠️
+  - [[R37] Utiliser des fonctionnalités de contrôle d'accès obligatoire MAC](https://github.com/ArtemissFR/DEIMOS_Project/blob/main/roles/ANSSI_Configuration/tasks/6-system_configuration/R37_MAC_access_control.yml) : status = ✔️
+  - [[R38] Créer un groupe dédié à l'usage de sudo](https://github.com/ArtemissFR/DEIMOS_Project/blob/main/roles/ANSSI_Configuration/tasks/6-system_configuration/R38_dedicated_sudo_group.yml) : status = ✔️
+  - [[R39] Modifier les directives de configuration sudo](https://github.com/ArtemissFR/DEIMOS_Project/blob/main/roles/ANSSI_Configuration/tasks/6-system_configuration/R39_sudoers_file_permissions.yml) : status = ✔️
+  - [[R40] Utiliser des utilisateurs cibles non-privilégiés pour les commandes sudo](https://github.com/ArtemissFR/DEIMOS_Project/blob/main/roles/ANSSI_Configuration/tasks/6-system_configuration/R40_unprivileged_user.yml) : status = ✔️
   - [[R41] Limiter l'utilisation de commandes nécessitant la directive EXEC](https://github.com/ArtemissFR/DEIMOS_Project/blob/main/roles/ANSSI_Configuration/tasks/6-system_configuration/R41_restriction_EXEC.yml) : status = ⚠️
   - [[R42] Bannir les négations dans les spécifications sudo](https://github.com/ArtemissFR/DEIMOS_Project/blob/main/roles/ANSSI_Configuration/tasks/6-system_configuration/R42_remove_negations.yml) : status = ⚠️
-  - [[R43] Préciser les arguments dans les spécifications sudo](https://github.com/ArtemissFR/DEIMOS_Project/blob/main/roles/ANSSI_Configuration/tasks/6-system_configuration/R43_arguments_sudoers.yml) : status = ⚠️
-  - [[R44] Éditer les fichiers de manière sécurisée avec sudo](https://github.com/ArtemissFR/DEIMOS_Project/blob/main/roles/ANSSI_Configuration/tasks/6-system_configuration/R44_secure_file_editing.yml) : status = ⚠️
+  - [[R43] Préciser les arguments dans les spécifications sudo](https://github.com/ArtemissFR/DEIMOS_Project/blob/main/roles/ANSSI_Configuration/tasks/6-system_configuration/R43_arguments_sudoers.yml) : status = ✔️
+  - [[R44] Éditer les fichiers de manière sécurisée avec sudo](https://github.com/ArtemissFR/DEIMOS_Project/blob/main/roles/ANSSI_Configuration/tasks/6-system_configuration/R44_secure_file_editing.yml) : status = ✔️
 ### 6.3.2 - AppArmor
   - [[R45] Activer les profils de sécurité AppArmor](https://github.com/ArtemissFR/DEIMOS_Project/blob/main/roles/ANSSI_Configuration/tasks/6-system_configuration/R45_apparmor_profil.yml) : status = ⚠️
 ### 6.3.3 - SELinux
-  - [[R46] Activer SELinux avec la politique targeted](https://github.com/ArtemissFR/DEIMOS_Project/blob/main/roles/ANSSI_Configuration/tasks/6-system_configuration/R46_SELinux_Targeted.yml) : status = ⚠️
-  - [[R47] Confiner les utilisateurs interactifs non privilégiés](https://github.com/ArtemissFR/DEIMOS_Project/blob/main/roles/ANSSI_Configuration/tasks/6-system_configuration/R47_access_restrictions_non-privileged_users.yml) : status = ⚠️
+  - [[R46] Activer SELinux avec la politique targeted](https://github.com/ArtemissFR/DEIMOS_Project/blob/main/roles/ANSSI_Configuration/tasks/6-system_configuration/R46_SELinux_Targeted.yml) : status = ✔️
+  - [[R47] Confiner les utilisateurs interactifs non privilégiés](https://github.com/ArtemissFR/DEIMOS_Project/blob/main/roles/ANSSI_Configuration/tasks/6-system_configuration/R47_access_restrictions_non-privileged_users.yml) : status = ✔️
   - [R48] Paramétrer les variables SELinux : status = ❌
-  - [[R49] Désinstaller les outils de débogage de politique SELinux](https://github.com/ArtemissFR/DEIMOS_Project/blob/main/roles/ANSSI_Configuration/tasks/6-system_configuration/R49_SELinux_debugging_tools.yml) : status = ⚠️
+  - [[R49] Désinstaller les outils de débogage de politique SELinux](https://github.com/ArtemissFR/DEIMOS_Project/blob/main/roles/ANSSI_Configuration/tasks/6-system_configuration/R49_SELinux_debugging_tools.yml) : status = ✔️
 ## 6.4 - Fichiers et répertoires
 ### 6.4.1 - Fichiers et répertoires sensibles
-  - [[R50] Restreindre les droits d'accès aux fichiers et aux répertoires sensibles](https://github.com/ArtemissFR/DEIMOS_Project/blob/main/roles/ANSSI_Configuration/tasks/6-system_configuration/R50_Restrict_access.yml) : status = ⚠️
+  - [[R50] Restreindre les droits d'accès aux fichiers et aux répertoires sensibles](https://github.com/ArtemissFR/DEIMOS_Project/blob/main/roles/ANSSI_Configuration/tasks/6-system_configuration/R50_Restrict_access.yml) : status = ✔️
   - [[R51] Changer les secrets et droits d'accès dès l'installation](https://github.com/ArtemissFR/DEIMOS_Project/blob/main/roles/ANSSI_Configuration/tasks/8-bonus/password_generation.yml) : status = ⚠️
 ### 6.4.2 - Fichiers IPC nommés, sockets ou pipes
   - [R52] Restreindre les accès aux sockets et aux pipes nommées : status = ❌
 ### 6.4.3 - Droits d'accès
-  - [[R53] Éviter les fichiers ou répertoires sans utilisateur ou sans groupe connu](https://github.com/ArtemissFR/DEIMOS_Project/blob/main/roles/ANSSI_Configuration/tasks/6-system_configuration/R53_files_directories_without_valid_user.yml) : status = ⚠️
+  - [[R53] Éviter les fichiers ou répertoires sans utilisateur ou sans groupe connu](https://github.com/ArtemissFR/DEIMOS_Project/blob/main/roles/ANSSI_Configuration/tasks/6-system_configuration/R53_files_directories_without_valid_user.yml) : status = ✔️
   - [[R54] Activer le sticky bit sur les répertoires inscriptibles](https://github.com/ArtemissFR/DEIMOS_Project/blob/main/roles/ANSSI_Configuration/tasks/6-system_configuration/R54_sticky_bit.yml) : status = ⚠️
-  - [[R55] Séparer les répertoires temporaires des utilisateurs](https://github.com/ArtemissFR/DEIMOS_Project/blob/main/roles/ANSSI_Configuration/tasks/6-system_configuration/R55_separate_temporary_directories.yml) : status = ⚠️
-  - [[R56] Éviter l'usage d'exécutables avec les droits spéciaux setuid et setgid](https://github.com/ArtemissFR/DEIMOS_Project/blob/main/roles/ANSSI_Configuration/tasks/6-system_configuration/R56_executables_setuid_setgid.yml) : status = ⚠️
-  - [[R57] Éviter l'usage d'exécutables avec les droits spéciaux setuid root et setgid root](https://github.com/ArtemissFR/DEIMOS_Project/blob/main/roles/ANSSI_Configuration/tasks/6-system_configuration/R57_setuid_setgid_permissions.yml) : status = ⚠️
+  - [[R55] Séparer les répertoires temporaires des utilisateurs](https://github.com/ArtemissFR/DEIMOS_Project/blob/main/roles/ANSSI_Configuration/tasks/6-system_configuration/R55_separate_temporary_directories.yml) : status = ✔️
+  - [[R56] Éviter l'usage d'exécutables avec les droits spéciaux setuid et setgid](https://github.com/ArtemissFR/DEIMOS_Project/blob/main/roles/ANSSI_Configuration/tasks/6-system_configuration/R56_executables_setuid_setgid.yml) : status = ✔️
+  - [[R57] Éviter l'usage d'exécutables avec les droits spéciaux setuid root et setgid root](https://github.com/ArtemissFR/DEIMOS_Project/blob/main/roles/ANSSI_Configuration/tasks/6-system_configuration/R57_setuid_setgid_permissions.yml) : status = ✔️
 ## 6.5 - Gestion des paquets
   - [[R58] N'installer que les paquets strictement nécessaires](https://github.com/ArtemissFR/DEIMOS_Project/blob/main/roles/ANSSI_Configuration/tasks/6-system_configuration/6.5-package_management/R58_basic_package_list.yml) : status = ✔️
   - [[R59] Utiliser des dépôts de paquets de confiance](https://github.com/ArtemissFR/DEIMOS_Project/blob/main/roles/ANSSI_Configuration/tasks/6-system_configuration/6.5-package_management/R59_trusted_repo.yml) : status = ✔️
