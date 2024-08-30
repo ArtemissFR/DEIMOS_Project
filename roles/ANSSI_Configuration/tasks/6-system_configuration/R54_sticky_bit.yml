@@ -1,0 +1,13 @@
+# --- [R54] --- #
+
+    - name: Ensure sticky bit is set on world-writable directories
+      find:
+        paths:
+          - /tmp
+          - /var/tmp
+        recurse: yes
+        file_type: directory
+        mode: "u+w,g+w,o+w"
+      register: world_writable_dirs
+      
+# --- [R54] --- #
