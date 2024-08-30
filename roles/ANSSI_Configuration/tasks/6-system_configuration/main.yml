@@ -4,6 +4,9 @@
 #- include_tasks: R34_service_accounts.yml
 #- include_tasks: R36_update_MASK.yml
 #- include_tasks: R37_MAC_access_control.yml
+#- include_tasks: R38_dedicated_sudo_group.yml
+#- include_tasks: R39_sudoers_file_permissions.yml
+#- include_tasks: R40_unprivileged_user.yml
 #- include_tasks: R41_restriction_EXEC.yml
 #- include_tasks: R42_remove_negations.yml
 #- include_tasks: R45_apparmor_profil.yml
