@@ -1,4 +1,3 @@
----
 
 # Cahier de Recette - Déploiement des Mesures de Sécurité sur AlmaLinux
 
