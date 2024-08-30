@@ -18,6 +18,6 @@
 
 
     - name: Reload shell configuration
-      command: source /etc/bashrc
+      shell: source /etc/bashrc
       
 # --- [R36] --- #
