@@ -1,0 +1,21 @@
+# --- [R37] --- #
+
+    - name: Configure SELinux to enforce mandatory access control (MAC)
+      lineinfile:
+        path: /etc/selinux/config
+        regexp: '^SELINUX='
+        line: 'SELINUX=enforcing'
+        backup: yes
+
+    - name: Ensure the system is using SELinux enforcing mode
+      command: getenforce
+      register: selinux_status
+
+    - name: Reboot the system to apply SELinux settings if not already enforcing
+      reboot:
+        msg: "Rebooting the system to apply SELinux enforcing mode"
+        connect_timeout: 5
+        reboot_timeout: 600
+      when: selinux_status.stdout != "Enforcing"
+      
+# --- [R37] --- #
