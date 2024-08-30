@@ -3,10 +3,13 @@
     - name: Find files without valid user or group
       find:
         paths: /
-        no_user: yes
-        no_group: yes
+        file_type: file
+        recurse: yes
+        use_regex: no
+        patterns: "*"
       register: orphaned_files
-      tags: R53
+      tags:
+        - R53
 
     - name: Report orphaned files
       debug:
