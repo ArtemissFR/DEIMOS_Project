@@ -1,6 +1,6 @@
 - include_tasks: R61_auto_updates.yml
 
-#- include_tasks: R29_boot_access.yml
+- include_tasks: R29_boot_access.yml
 - include_tasks: R34_service_accounts.yml
 - include_tasks: R36_update_MASK.yml
 - include_tasks: R37_MAC_access_control.yml
