@@ -9,6 +9,8 @@
 - include_tasks: R40_unprivileged_user.yml
 - include_tasks: R41_restriction_EXEC.yml
 - include_tasks: R42_remove_negations.yml
+- include_tasks: R43_arguments_sudoers.yml
+- include_tasks: R44_secure_file_editing.yml
 - include_tasks: R45_apparmor_profil.yml
 - include_tasks: R46_SELinux_Targeted.yml
 - include_tasks: R47_access_restrictions_non-privileged_users.yml
