@@ -1,0 +1,38 @@
+# --- [R47] --- #
+
+    - name: Configure PAM to restrict shell access for non-privileged users
+      ansible.builtin.lineinfile:
+        path: /etc/security/access.conf
+        state: present
+        line: "-:ALL EXCEPT root :ALL"
+
+    - name: Ensure PAM access restrictions are applied
+      ansible.builtin.lineinfile:
+        path: /etc/pam.d/sshd
+        state: present
+        insertafter: "#%PAM-1.0"
+        line: "auth required pam_access.so"
+
+    - name: Restrict non-privileged users from accessing su command
+      ansible.builtin.lineinfile:
+        path: /etc/pam.d/su
+        state: present
+        insertafter: "#%PAM-1.0"
+        line: "auth required pam_wheel.so use_uid"
+
+    - name: Add non-privileged users to restricted group
+      ansible.builtin.user:
+        name: "{{ item }}"
+        groups: restricted
+        append: yes
+      loop:
+        - user1
+        - user2
+
+    - name: Restrict non-privileged users from accessing dangerous binaries
+      ansible.builtin.command:
+        cmd: 'chmod 700 /bin/su /bin/bash'
+      args:
+        warn: false
+      
+# --- [R47] --- #
