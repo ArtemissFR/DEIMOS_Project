@@ -3,16 +3,16 @@
     - name: Update UMASK in /etc/bashrc
       lineinfile:
         path: /etc/bashrc
-        regexp: '^UMASK'
-        line: 'UMASK 027'
+        regexp: '^umask'
+        line: 'umask 027'
         state: present
         backup: yes
-
+    
     - name: Ensure UMASK is set to 027 in /etc/profile
       lineinfile:
         path: /etc/profile
-        regexp: '^UMASK'
-        line: 'UMASK 027'
+        regexp: '^umask'
+        line: 'umask 027'
         state: present
         backup: yes
 
