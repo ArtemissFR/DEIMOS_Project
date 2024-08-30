@@ -1,0 +1,25 @@
+# --- [R36] --- #
+
+    - name: Update UMASK in /etc/bashrc
+      lineinfile:
+        path: /etc/bashrc
+        regexp: '^UMASK'
+        line: 'UMASK 027'
+        state: present
+        backup: yes
+      notify: Reload shell configuration
+
+    - name: Ensure UMASK is set to 027 in /etc/profile
+      lineinfile:
+        path: /etc/profile
+        regexp: '^UMASK'
+        line: 'UMASK 027'
+        state: present
+        backup: yes
+      notify: Reload shell configuration
+
+    handlers:
+      - name: Reload shell configuration
+        command: source /etc/bashrc
+      
+# --- [R36] --- #
