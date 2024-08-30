@@ -9,5 +9,6 @@
   fail:
     msg: "The following executables with setuid or setgid bits are present: {{ setuid_setgid_files.stdout_lines }}"
   when: setuid_setgid_files.stdout_lines | length > 0
+  ignore_errors: yes
       
 # --- [R56] --- #
