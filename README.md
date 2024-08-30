@@ -132,6 +132,28 @@ Ce projet a pour objectif de fournir un guide et un ensemble de scripts Ansible 
 | ~ | - Configuration des paramètre SSH |
 | ~ | - Configuration Auditd |
 
+#### Rôle "ANSSI_Configuration" :
+| Catégories | Tâches | 
+|-----------------|--------|
+| *Hardware Configuration* |  |
+| "R3_UEFI_Secure_Boot" | Ce script Yaml installe d'abord le paquet mokutil sur un système. Ensuite, il vérifie si le démarrage sécurisé UEFI est activé. Si ce n'est pas le cas, il tente d'activer la validation pour le démarrage sécurisé UEFI. |
+| *Linux Kernel Configuration* | - Protection du système de commande Kernel |
+| ~ | - Activation IOMMU |
+| ~ | - Désactivation des modules de chargement Kernel |
+| ~ | - Configuration du Kernel Yama |
+| ~ | - Configuration du Kernel |
+| *Syteme Configuration* | - Installation des packages de base |
+| ~ | - Installation des packages de Réseaux |
+| ~ | - Installation des packages de Bureautique |
+| ~ | - Ajout des dépots de confiance |
+| ~ | - Mise a jour de tout les paquets |
+| ~ | - Suppression des paquets inutiles |
+| ~ | - Activation de l'automatisation des mises a jour |
+| *Services Configuration* | - Désactivation des services inutiles |
+| ~ | - Mise en place de la conteneurisation (not working) |
+| ~ | - Configuration des paramètre SSH |
+| ~ | - Configuration Auditd |
+
 ---
 [Document des recommandations de l'ANSSI](https://github.com/ArtemissFR/DEIMOS_Project/blob/main/Documentation/ANSSI/fr_np_linux_configuration-v2.0.pdf)
 
