@@ -1,0 +1,23 @@
+# --- [R43] --- #
+
+    - name: Specify allowed arguments in sudoers
+      copy:
+        dest: /etc/sudoers.d/args_specified_sudo
+        content: |
+          # Allow specific arguments for shutdown command
+          %sudo_users ALL=(ALL) NOPASSWD: /sbin/shutdown -h now, /sbin/shutdown -r now
+
+          # Allow specific arguments for systemctl
+          %sudo_users ALL=(ALL) NOPASSWD: /bin/systemctl start httpd, /bin/systemctl stop httpd
+      tags: R43
+
+    - name: Ensure the arguments-specified sudoers file has the correct permissions
+      file:
+        path: /etc/sudoers.d/args_specified_sudo
+        owner: root
+        group: root
+        mode: '0440'
+      tags: R43
+
+      
+# --- [R43] --- #
