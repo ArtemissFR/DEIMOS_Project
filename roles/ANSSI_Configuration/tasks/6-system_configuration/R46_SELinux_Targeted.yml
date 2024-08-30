@@ -9,7 +9,9 @@
         state: present
 
     - name: Set SELinux policy to targeted
-      command: setsebool -P targeted 1
+      command: setenforce 1
+      # Utilisation de `setenforce` pour appliquer le mode enforcing.
+      # `setsebool` est utilisé pour changer les options de booléens de SELinux, pas le mode policy.
 
     - name: Reboot if SELinux policy was changed
       reboot:
