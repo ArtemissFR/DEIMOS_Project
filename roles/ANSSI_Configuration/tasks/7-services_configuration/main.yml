@@ -3,7 +3,7 @@
 - include_tasks: R69_openssh_configuration.yml
 - include_tasks: R73_Configure_auditd.yml
 
-#- include_tasks: R80_reduce_network_attack.yml
+- include_tasks: R80_reduce_network_attack.yml
 
 - name: Résultat
   debug:
