@@ -133,10 +133,10 @@ Ce projet a pour objectif de fournir un guide et un ensemble de scripts Ansible 
 | ~ | - Configuration Auditd |
 
 #### Rôle "ANSSI_Configuration" :
-| Catégories | Tâches | 
+| Catégories | Script | Tâches | 
 |-----------------|--------|
-| *Hardware Configuration* |  |
-| "R3_UEFI_Secure_Boot" | Ce script Yaml installe d'abord le paquet mokutil sur un système. Ensuite, il vérifie si le démarrage sécurisé UEFI est activé. Si ce n'est pas le cas, il tente d'activer la validation pour le démarrage sécurisé UEFI. |
+| *Hardware Configuration* |  |  |
+|  | "R3_UEFI_Secure_Boot" | Ce script Yaml installe d'abord le paquet mokutil sur un système. Ensuite, il vérifie si le démarrage sécurisé UEFI est activé. Si ce n'est pas le cas, il tente d'activer la validation pour le démarrage sécurisé UEFI. |
 
 ---
 [Document des recommandations de l'ANSSI](https://github.com/ArtemissFR/DEIMOS_Project/blob/main/Documentation/ANSSI/fr_np_linux_configuration-v2.0.pdf)
