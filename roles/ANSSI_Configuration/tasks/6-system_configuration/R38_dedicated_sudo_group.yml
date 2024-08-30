@@ -1,0 +1,19 @@
+# --- [R38] --- #
+
+    - name: Create a dedicated sudo group
+      group:
+        name: sudo_users
+        state: present
+      tags: R38
+
+    - name: Add specific users to the sudo group
+      user:
+        name: "{{ item }}"
+        groups: sudo_users
+        append: yes
+      loop:
+        - user1
+        - user2
+      tags: R38
+      
+# --- [R38] --- #
