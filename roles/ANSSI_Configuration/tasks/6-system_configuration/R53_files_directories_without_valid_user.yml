@@ -1,0 +1,14 @@
+# --- [R53] --- #
+
+    - name: Find and report files or directories without a valid user or group
+      find:
+        paths: /
+        ignore_errors: yes
+        file_type: any
+        uid: -1
+        gid: -1
+      register: unknown_ownership_files
+      changed_when: false
+      ignore_errors: yes
+      
+# --- [R53] --- #
