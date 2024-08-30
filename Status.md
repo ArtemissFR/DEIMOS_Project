@@ -82,8 +82,8 @@
   - [[R38] Créer un groupe dédié à l'usage de sudo](https://github.com/ArtemissFR/DEIMOS_Project/blob/main/roles/ANSSI_Configuration/tasks/6-system_configuration/R38_dedicated_sudo_group.yml) : status = ✔️
   - [[R39] Modifier les directives de configuration sudo](https://github.com/ArtemissFR/DEIMOS_Project/blob/main/roles/ANSSI_Configuration/tasks/6-system_configuration/R39_sudoers_file_permissions.yml) : status = ✔️
   - [[R40] Utiliser des utilisateurs cibles non-privilégiés pour les commandes sudo](https://github.com/ArtemissFR/DEIMOS_Project/blob/main/roles/ANSSI_Configuration/tasks/6-system_configuration/R40_unprivileged_user.yml) : status = ✔️
-  - [[R41] Limiter l'utilisation de commandes nécessitant la directive EXEC](https://github.com/ArtemissFR/DEIMOS_Project/blob/main/roles/ANSSI_Configuration/tasks/6-system_configuration/R41_restriction_EXEC.yml) : status = ⚠️
-  - [[R42] Bannir les négations dans les spécifications sudo](https://github.com/ArtemissFR/DEIMOS_Project/blob/main/roles/ANSSI_Configuration/tasks/6-system_configuration/R42_remove_negations.yml) : status = ⚠️
+  - [[R41] Limiter l'utilisation de commandes nécessitant la directive EXEC](https://github.com/ArtemissFR/DEIMOS_Project/blob/main/roles/ANSSI_Configuration/tasks/6-system_configuration/R41_restriction_EXEC.yml) : status = ✔️
+  - [[R42] Bannir les négations dans les spécifications sudo](https://github.com/ArtemissFR/DEIMOS_Project/blob/main/roles/ANSSI_Configuration/tasks/6-system_configuration/R42_remove_negations.yml) : status = ✔️
   - [[R43] Préciser les arguments dans les spécifications sudo](https://github.com/ArtemissFR/DEIMOS_Project/blob/main/roles/ANSSI_Configuration/tasks/6-system_configuration/R43_arguments_sudoers.yml) : status = ✔️
   - [[R44] Éditer les fichiers de manière sécurisée avec sudo](https://github.com/ArtemissFR/DEIMOS_Project/blob/main/roles/ANSSI_Configuration/tasks/6-system_configuration/R44_secure_file_editing.yml) : status = ✔️
 ### 6.3.2 - AppArmor
