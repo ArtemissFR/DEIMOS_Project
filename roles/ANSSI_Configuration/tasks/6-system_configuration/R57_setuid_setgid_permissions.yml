@@ -1,0 +1,18 @@
+# --- [R57] --- #
+
+    - name: Find and remove setuid and setgid permissions
+      find:
+        paths: /
+        recurse: yes
+        file_type: file
+        permissions: 'u+s,g+s'
+      register: suid_files
+
+    - name: Remove setuid and setgid permissions from found files
+      file:
+        path: "{{ item.path }}"
+        mode: "u-s,g-s"
+      loop: "{{ suid_files.files }}"
+      when: suid_files.matched > 0
+      
+# --- [R57] --- #
